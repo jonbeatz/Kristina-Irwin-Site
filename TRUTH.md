@@ -32,7 +32,9 @@ This repo is a **one-page** rebuild from `.cursor/assets/KI-MockUps/`. The multi
 
 Kristina Irwin — Los Angeles Community College District Board of Trustees, **Seat 2** (election **November 3, 2026**). Committee name, FPPC ID, and donation/endorse URLs: confirm with client before shipping (placeholders on the page). Live kristinairwin.com is still the prior Senate site until we deploy.
 
-**Build status (2026-08-21):** One-pager is on GitHub branch `Kristina-Irwin-Site-Project-v1` and ready for **client review**. Design locks: `.cursor/docs/ONE-PAGER.md` + `.cursor/docs/ReCall.md`. Do not run `siteground:deploy` until she signs off and placeholders are real.
+**Build status (2026-08-21):** One-pager is on GitHub branch `Kristina-Irwin-Site-Project-v1` (HEAD `6341719`) and ready for **client review**. Design locks: `.cursor/docs/ONE-PAGER.md` + `.cursor/docs/ReCall.md`. Do not run `siteground:deploy` until she signs off and placeholders are real.
+
+**How it runs:** Local = Next.js + Node (`web:dev`). SiteGround = static export only (`KI_STATIC=1` → `out/` → SFTP). Shared SiteGround does not host Node.js.
 
 ## Doc order
 

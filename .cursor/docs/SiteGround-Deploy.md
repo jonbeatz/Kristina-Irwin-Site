@@ -18,6 +18,8 @@ Do **not** upload until all of these are true:
 
 Live domain is still the old campaign until that upload.
 
+**How we ship:** Next.js only on the PC. `site:build:static` writes `out/` (HTML/CSS/JS). SFTP copies that folder. SiteGround does **not** run Node. Ignore `.env.local` `FTP_REMOTE_PATH=/nodejs/...` (leftover). After a real upload, flush SuperCacher (Site Tools → Speed → Caching). Prefer `--clean` so old Senate `.html` / `_next` files do not remain. Do not change MX (`smtp.google.com`).
+
 ## Quick commands
 
 ```powershell

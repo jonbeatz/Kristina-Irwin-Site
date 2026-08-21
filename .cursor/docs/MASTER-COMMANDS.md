@@ -312,7 +312,7 @@ LiteLLM / DeepSeek stack scripts live in `D:\Hermes\projects\_core-scripts\deeps
 | `npm run backup:project` | Interactive backup (Standard or Full, robocopy) |
 | `npm run backup:standard` | Standard backup — skips node_modules, .next, output, logs |
 | `npm run backup:full` | Full mirror — includes everything |
-| `npm run backup:quick` | Standard quick — auto `jonbeatz-project-v{N}-{a-z}`, no prompts |
+| `npm run backup:quick` | Standard quick — auto `kristina-irwin-site-project-v{N}-{a-z}`, no prompts |
 | `npm run backup:quick:full` | Full quick — auto folder name, no prompts |
 | `npm run backup:hermes-profile` | Hermes runtime only → `hermes-profile-latest/` (config.yaml, .env, memories) |
 | `npm run backup:profile` | Alias for `backup:quick` (legacy phrase) |
