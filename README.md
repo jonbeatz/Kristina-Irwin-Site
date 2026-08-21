@@ -19,10 +19,10 @@
 | Metric | Value |
 | :--- | :--- |
 | **Version** | `v1.0.0` · [Latest release](https://github.com/jonbeatz/Kristina-Irwin-Site/releases/tag/v1.0.0) |
-| **Stack** | Hermes profile skeleton — Next.js optional (`-Website` bootstrap) |
+| **Stack** | Next.js 15 App Router + Tailwind v4 — LACCD Seat 2 one-pager |
 | **Memory** | 🧠 Mem0 + Qdrant — `kristina-irwin-site_memories` collection |
-| **Live Site** | 🔜 Add hero screenshot to `public/media/` after first UI milestone |
-| **Status** | ⚡ BOOTSTRAPPED — customize README + run `npm run release` |
+| **Live Site** | https://kristinairwin.com — **still old Senate site** until SiteGround deploy |
+| **Status** | One-pager on `Kristina-Irwin-Site-Project-v1` — client review, then deploy |
 
 ----
 

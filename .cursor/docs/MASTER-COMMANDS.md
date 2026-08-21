@@ -55,8 +55,10 @@
 | `npm run mem0:search -- "query"` | Semantic search personal memory |
 | `npm run mem0:list` | List all personal memories |
 | `npm run mem0:seed:profile-jedi` | Re-seed Profile Jedi knowledge (infer=False) |
+| `npm run mnemosyne:remember -- "text"` | Additive local SQLite note (JonBeatz workstation store; prefix project name) |
+| `npm run mnemosyne:recall -- "query"` | Recall from Mnemosyne |
 
-**Requires:** LM Studio local server on **port 1234**.
+**Requires:** LM Studio local server on **port 1234** (Mem0 search/infer only). Mnemosyne works offline.
 
 ---
 

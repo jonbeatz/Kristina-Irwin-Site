@@ -6,6 +6,18 @@ Production host for **https://kristinairwin.com**. Static Next export (`out/`) u
 > Secrets live only in **`.env.local`** (gitignored) and  
 > `D:\Hermes\projects\_core-scripts\siteground-access\SiteGround_SFTP.md`.
 
+## Pre-deploy gate (2026-08-21)
+
+Do **not** upload until all of these are true:
+
+1. Kristina has reviewed localhost / a preview
+2. Official **committee name** and **FPPC ID** replace the footer placeholder
+3. Real **email**, **donate** URL, and socials replace the involve sample note
+4. `npm run site:build:static` succeeds and `siteground:deploy:dryrun` looks right
+5. Operator confirms this should **replace** the live Senate D24 site on the same `public_html`
+
+Live domain is still the old campaign until that upload.
+
 ## Quick commands
 
 ```powershell
