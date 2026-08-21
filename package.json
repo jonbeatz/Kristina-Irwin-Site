@@ -130,7 +130,9 @@
     "site:preview": "npx --yes serve out -l 5066",
     "siteground:test": "node scripts/siteground-test.mjs",
     "siteground:deploy:dryrun": "node scripts/siteground-deploy.mjs",
-    "siteground:deploy": "node scripts/siteground-deploy.mjs --confirm"
+    "siteground:deploy": "node scripts/siteground-deploy.mjs --confirm",
+    "siteground:deploy:clean": "node scripts/siteground-deploy.mjs --confirm --clean",
+    "siteground:purge-cache": "node scripts/siteground-purge-cache.mjs"
   },
   "author": "Kristina-Irwin-Site",
   "license": "UNLICENSED",

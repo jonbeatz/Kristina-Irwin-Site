@@ -299,6 +299,23 @@ LiteLLM / DeepSeek stack scripts live in `D:\Hermes\projects\_core-scripts\deeps
 
 ---
 
+## SiteGround (this profile)
+
+Production is static SFTP to `public_html`. Full write-up: [SiteGround-Deploy.md](./SiteGround-Deploy.md).
+
+| Command | What it does |
+|---------|--------------|
+| `npm run site:build:static` | Next export → `out/` |
+| `npm run site:preview` | Serve `out/` on **:5066** |
+| `npm run siteground:test` | Read-only SFTP connect |
+| `npm run siteground:deploy:dryrun` | List remote, no upload |
+| `npm run siteground:deploy:clean` | Wipe `public_html` + upload `out/` |
+| `npm run siteground:purge-cache` | SuperCacher PURGE (one-shot PHP; SSH exec is denied) |
+
+After every live upload, run **purge-cache**. Bare URL can keep the old HTML until then.
+
+---
+
 ## Logging & maintenance
 
 | Command | What it does |

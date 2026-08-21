@@ -5,7 +5,7 @@ If an agent is new to this profile, read this file first.
 **Profile root:** D:\\Hermes\\projects\\Kristina-Irwin-Site
 **Hermes slug:** kristina-irwin-site
 
-**Now (2026-08-21):** Working branch `Kristina-Irwin-Site-Project-v1`. Read `ReCall.md` + `ONE-PAGER.md`. **Do not SiteGround-deploy** until client review. Live site is still the Senate campaign. Local Next.js; live will be static HTML.
+**Now (2026-08-21):** **LIVE** https://kristinairwin.com — LACCD Seat 2 one-pager. Working branch `Kristina-Irwin-Site-Project-v1`. After any upload run `npm run siteground:purge-cache`. Placeholders still on the page.
 
 ---
 
