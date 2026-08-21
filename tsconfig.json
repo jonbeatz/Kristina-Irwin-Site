@@ -35,6 +35,7 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
+    "archive",
     "SmoothScrollProvider.tsx",
     "components/SmoothScrollProvider.tsx",
     "components/ThreeBackground.tsx",

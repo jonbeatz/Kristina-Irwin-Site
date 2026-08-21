@@ -9,8 +9,8 @@
 
 ## What this is
 
-Client website for **Kristina Irwin** (CA State Senate, District 24).  
-This repo is a **fresh one-page site** rebuild. The multi-page campaign that is **currently live** on SiteGround is parked in **`archive/live-site-2026-06/`** (source + `out/` static export + brand tokens). Root `app/` is the new one-pager — do not mix the two. The earlier project also remains at `D:\Hermes\projects\_archive\Kristina-Irwin` (read-only fleet archive).
+Client website for **Kristina Irwin** — **LACCD Board of Trustees, Seat 2** (November 3, 2026).  
+This repo is a **one-page** rebuild from `.cursor/assets/KI-MockUps/`. The multi-page Senate campaign still live on SiteGround is parked in **`archive/live-site-2026-06/`**. Do not mix the two.
 
 ## Hard boundaries
 
@@ -30,7 +30,7 @@ This repo is a **fresh one-page site** rebuild. The multi-page campaign that is 
 
 ## Candidate (standing facts)
 
-Kristina Irwin — California State Senate, District 24. Committee / disclaimer and donation processor: confirm with client before shipping compliance copy (see archive `Wix-Site` snapshot).
+Kristina Irwin — Los Angeles Community College District Board of Trustees, **Seat 2** (election **November 3, 2026**). Committee name, FPPC ID, and donation/endorse URLs: confirm with client before shipping (placeholders on the page). Live kristinairwin.com is still the prior Senate site until we deploy.
 
 ## Doc order
 
