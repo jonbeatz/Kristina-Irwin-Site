@@ -79,10 +79,7 @@ Then set topics and run `npm run release`.
 
 ## GitHub Pages
 
-Workflow: `.github/workflows/deploy-pages.yml` (when `-Website` or `-GitHub` bootstrap)  
-Enable: Repo → Settings → Pages → Source: **GitHub Actions**
-
-> Node-only apps (Clerk, API routes) should use Hostinger Node deploy instead — see `HOSTINGER-DEPLOY.md`.
+**Not used.** Production is SiteGround static SFTP (`site:build:static` → `siteground:deploy`). The bootstrap `deploy-pages.yml` workflow was removed so pushes to `main` no longer fail or email. Do not re-enable Pages for this client repo.
 
 ---
 

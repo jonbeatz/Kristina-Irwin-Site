@@ -126,7 +126,6 @@
     "web:build": "next build",
     "web:start": "next start",
     "web:lint": "next lint",
-    "build:pages": "next build",
     "site:build:static": "cross-env KI_STATIC=1 next build",
     "site:preview": "npx --yes serve out -l 5066",
     "siteground:test": "node scripts/siteground-test.mjs",
