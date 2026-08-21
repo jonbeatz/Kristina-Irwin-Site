@@ -45,10 +45,11 @@ layout in **`PROJECT-STRUCTURE.md`** (in that same repo).
 
 ```powershell
 npm run backup:quick    # Standard backup, auto folder name, no prompts
-npm run backup:full     # Full mirror — includes everything
+npm run backup:full     # Full mirror — still skips archive/
 ```
 
-Backups go to `G:\Hermes_Project_BackUpz\Kristina-Irwin-Site\` with sequential naming.
+Backups go to `G:\Hermes_Project_BackUpz\Kristina-Irwin-Site\` with sequential naming.  
+**Never back up `archive/`** — local look-and-feel reference only (enforced in `scripts/project-backup.mjs`).
 
 ## Skills Index
 

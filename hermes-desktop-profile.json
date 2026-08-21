@@ -1,0 +1,19 @@
+{
+  "profileName": "kristina-irwin-site",
+  "displayName": "Kristina-Irwin-Site",
+  "workspaceDir": "D:\\Hermes\\projects\\Kristina-Irwin-Site",
+  "hermesHome": "%LOCALAPPDATA%\\\\hermes\\\\profiles\\\\kristina-irwin-site",
+  "desktopConfig": {
+    "projectDirFile": "%APPDATA%\\\\Hermes\\\\project-dir.json",
+    "activeProfileFile": "%APPDATA%\\\\Hermes\\\\active-profile.json"
+  },
+  "launcher": "scripts\\\\start-hermes-desktop-kristina-irwin-site.ps1",
+  "npmScript": "npm run desktop",
+  "cliAlias": "kristina-irwin-site",
+  "mem0": {
+    "userId": "kristina-irwin-site",
+    "collection": "kristina-irwin-site_memories",
+    "qdrantPath": "%USERPROFILE%\\\\.mem0\\\\qdrant_kristina-irwin-site"
+  },
+  "notes": "Kristina Irwin one-page website — client SiteGround rebuild (successor to archived Kristina-Irwin)."
+}

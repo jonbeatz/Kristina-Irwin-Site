@@ -3,6 +3,9 @@
 /.next/
 /out/
 
+# Local look-and-feel copy of the live multi-page site — not GitHub, not G:\ backups
+/archive/
+
 # env (keep .env.local.example committable)
 .env*.local
 

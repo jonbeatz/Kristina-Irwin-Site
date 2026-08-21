@@ -66,10 +66,12 @@ See `.cursor/prompts/Release-Version.md` for full ritual.
 ## Create remote (if not bootstrapped with `-GitHub`)
 
 ```powershell
-gh repo create jonbeatz/Kristina-Irwin-Site --public --description "Kristina Irwin one-page website — client SiteGround rebuild (successor to archived Kristina-Irwin)." --source . --remote origin --push
+gh repo create jonbeatz/Kristina-Irwin-Site --private --description "Kristina Irwin one-page website — client SiteGround rebuild (successor to archived Kristina-Irwin)." --source . --remote origin --push
 git branch Kristina-Irwin-Site-Project-v1
 git push -u origin Kristina-Irwin-Site-Project-v1
 ```
+
+**This is a client campaign repo — keep it private.** Do not push `archive/` (local look-and-feel copy) or `.env.local`.
 
 Then set topics and run `npm run release`.
 

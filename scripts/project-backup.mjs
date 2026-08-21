@@ -28,6 +28,9 @@ const BACKUP_FOLDER_BASE = "kristina-irwin-site-project";
 const BACKUP_FOLDER_PATTERN = new RegExp("^" + BACKUP_FOLDER_BASE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "-v(\\d+)-([a-z])$", "i");
 const DEFAULT_START_VERSION = 1;
 const STANDARD_DIRS = ["node_modules", ".next", "out", "output", "logs", "test-results", "__pycache__", ".venv", "venv"];
+// Local look-and-feel reference only — never copy into G:\ backups (standard or full).
+const ALWAYS_EXCLUDE_DIRS = [path.join(REPO_ROOT, "archive")];
+const ALWAYS_EXCLUDE_LABELS = ["archive/"];
 const NOTES_REL_PATH = path.join(".cursor", "BackUp-Notez.md");
 const NOTES_FOOTER = "\n*Backup created — Kristina-Irwin-Site project.*\n";
 
@@ -125,9 +128,16 @@ function verifyBackupContents(backupPath, backupType) {
   return { success: errors.length === 0, errors, warnings, checkedItemsCount: checks.length };
 }
 
+function xdClause(backupType) {
+  const dirs = [...ALWAYS_EXCLUDE_DIRS];
+  if (backupType !== "FULL") dirs.push(...STANDARD_DIRS);
+  return dirs.map((d) => `"${d}"`).join(" ");
+}
+
 function formatExcluded(backupType) {
-  if (backupType === "FULL") return "None (full backup)";
-  return STANDARD_DIRS.map((d) => `${d}/`).join(", ");
+  const labels = [...ALWAYS_EXCLUDE_LABELS];
+  if (backupType !== "FULL") labels.push(...STANDARD_DIRS.map((d) => `${d}/`));
+  return labels.join(", ");
 }
 
 function buildNoteEntry({ timestamp, backupType, userNotes, gitInfo, backupFolder, projectVersion, verification }) {
@@ -257,6 +267,7 @@ async function main() {
     if (isDryRun) {
       console.log("\n[dry-run] Backup plan (no files copied):");
       console.log(`  Destination: ${fullBackupPath}`);
+      console.log(`  Excluded:    ${formatExcluded(backupType)}`);
       return;
     }
 
@@ -269,12 +280,8 @@ async function main() {
     fs.mkdirSync(fullBackupPath, { recursive: true });
 
     let cmd = `robocopy "${REPO_ROOT}" "${fullBackupPath}" /MIR /NFL /NDL /NJH /NP /R:1 /W:1`;
-    if (backupType === "STANDARD") {
-      cmd += ` /XD ${STANDARD_DIRS.join(" ")}`;
-      console.log(`Standard skips: ${formatExcluded("STANDARD")}\n`);
-    } else {
-      console.log("Full backup: no directory skips.\n");
-    }
+    cmd += ` /XD ${xdClause(backupType)}`;
+    console.log(`${backupType === "FULL" ? "Full" : "Standard"} skips: ${formatExcluded(backupType)}\n`);
 
     console.log("Creating backup...\n");
     const now = new Date();
