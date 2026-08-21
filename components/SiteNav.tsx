@@ -55,6 +55,7 @@ export default function SiteNav() {
   }, [])
 
   function go(id: string) {
+    setActive(id)
     setOpen(false)
     scrollToId(id)
   }
@@ -64,13 +65,25 @@ export default function SiteNav() {
       <div className="ki-nav-inner">
         <a
           href="#hero"
-          className="ki-wordmark"
+          className="ki-brand"
           onClick={(e) => {
             e.preventDefault()
             go("hero")
           }}
         >
-          <span>KRISTINA</span> <span>IRWIN</span>
+          {/* Graphic mark parked — swap back in if we want it in the bar
+          <Image
+            className="ki-nav-mark"
+            src="/images/logo-nav-mix.png"
+            alt="Kristina Irwin"
+            width={424}
+            height={132}
+            priority
+          />
+          */}
+          <span className="ki-wordmark">
+            <span>KRISTINA</span> <span>IRWIN</span>
+          </span>
         </a>
 
         <button
@@ -114,6 +127,14 @@ export default function SiteNav() {
           </li>
         </ul>
       </div>
+      {open ? (
+        <button
+          type="button"
+          className="ki-nav-scrim"
+          aria-label="Close menu"
+          onClick={() => setOpen(false)}
+        />
+      ) : null}
     </nav>
   )
 }

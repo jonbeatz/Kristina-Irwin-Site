@@ -27,7 +27,7 @@ export default function Home() {
               <span className="ki-h-line">A Stronger</span>
               <span className="ki-h-line">Future for Our</span>
               <span className="ki-h-line ki-script">Community</span>
-              <span className="ki-h-line">Colleges.</span>
+              <span className="ki-h-line ki-peach">Colleges.</span>
             </h1>
             <p className="ki-lede">
               Safe. Accountable. Affordable. Focused on preparing every student for success.
@@ -39,7 +39,10 @@ export default function Home() {
                 Kristina
               </a>
               <a className="ki-text-link" href="#priorities">
-                <span>Read her commitments →</span>
+                Read her commitments
+                <span className="ki-arrow" aria-hidden="true">
+                  →
+                </span>
               </a>
             </div>
           </div>
@@ -165,7 +168,10 @@ export default function Home() {
               </p>
               <p style={{ marginTop: 28 }}>
                 <a className="ki-text-link-navy" href="#involve">
-                  Stand with Kristina →
+                  Stand with Kristina
+                  <span className="ki-arrow" aria-hidden="true">
+                    →
+                  </span>
                 </a>
               </p>
             </div>
