@@ -1,0 +1,15 @@
+{
+  "projectName": "{PROFILE_NAME}",
+  "id": "{PROFILE_SLUG}",
+  "columns": [
+    { "id": "to-do", "name": "To Do" },
+    { "id": "in-progress", "name": "In Progress" },
+    { "id": "done", "name": "Done" },
+    { "id": "blocked", "name": "Blocked" }
+  ],
+  "cards": [],
+  "next-steps": [],
+  "last_updated": "{DATE}",
+  "isDragging": false,
+  "scrollToColumn": null
+}

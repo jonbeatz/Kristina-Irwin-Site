@@ -1,0 +1,21 @@
+# dependencies
+/node_modules
+/.next/
+/out/
+
+# env (keep .env.local.example committable)
+.env*.local
+
+# MCP config with embedded tokens
+.cursor/mcp.json
+
+# Never commit credential vault dumps or live key archives
+**/Personal-Secrets-Vault*.md
+**/*Secrets-Vault-Credentials*.md
+**/mcp-overlays-archived.json
+
+# misc
+.DS_Store
+*.log
+*.tsbuildinfo
+next-env.d.ts

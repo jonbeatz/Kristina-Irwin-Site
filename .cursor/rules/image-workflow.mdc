@@ -1,0 +1,52 @@
+---
+description: Fleet image workflow — HF cloud + fal + ComfyUI local GPU (shared workstation)
+globs:
+  - "**/*comfy*"
+  - "**/*image*"
+  - "**/generate-image*"
+  - "**/gen-image*"
+  - "**/vram*"
+alwaysApply: false
+---
+
+# Hermes fleet — Image Workflow Rules
+
+## Docs first
+
+1. **`.cursor/docs/IMAGE-WORKFLOW.md`** — master guide (fleet mirror from shared)
+2. **Model inventory + VRAM:** `.cursor/docs/ENGINEERING.md` (COMFYUI-MODELS + VRAM-IMAGE sections). Thin stubs `COMFYUI-MODELS.md` / `VRAM-IMAGE.md` point there if present.
+3. **Book projects:** also read project `IMAGE-LANE-SYSTEM-v2.md` + `LOCAL-COMFY-PICKER.md` when present (fal lane lock stays primary for print books).
+
+## Environment
+
+4. Secrets live in **this profile’s `.env.local`** (not MSC). Run `npm run env:setup` to seed.
+5. Local outputs: `IMAGE_OUTPUT_DIR` → `D:\Hermes\assets\media\{ProjectName}` (create if missing). Promote book keepers into project `Media/` with RECIPE/meta.
+
+## Hugging Face (cloud — free/cheap)
+
+6. **`npm run image:gen -- "prompt"`** when the profile has it — **zero local VRAM**.
+7. Requires **`HF_TOKEN`**. Run **`npm run image:doctor`** if missing.
+
+## fal.ai (paid — book dials / premium)
+
+8. **`npm run image:fal -- "prompt"`** (or book presets) — pay-per-use. Requires **`FAL_API_KEY`**.
+9. Picture books: follow project IMAGE-LANE (often Klein 9B dial → Qwen alt → Banana Pro finals). Do not replace locked fal finals with random local gens without Jon asking.
+
+## ComfyUI (local GPU — opt-in)
+
+10. **Never start ComfyUI** unless Jon asks, runs **`npm run comfy:start`**, or sets **`COMFYUI_AUTO_START=1`** (legacy alias `JONBEATZ_COMFYUI_AUTO_START=1` also honored).
+11. Check **`npm run comfy:status`** / VRAM first. Prefer **`npm run comfy:stop`** when done (keeps LM Studio).
+12. **ComfyUI is the ONLY local image runtime** — LM Studio cannot load diffusion GGUFs (text/Mem0 only).
+13. **VRAM (16 GB):** unload `qwen3-4b-instruct-2507` before **Qwen-Image-2512** / **Qwen-Image-Edit-2511** (`lms unload …` or `comfy:start -- -UnloadLMStudio`); restore with `npm run mem0:preflight`. Klein + z-image OK with text model resident.
+14. **Easy GUI (preferred):** App Mode — `:8188` → Workflows → **Hermes-Fable5** → `*-AppMode.json` (see vault `ComfyUI-App-Mode-Fable5` / IMAGE-WORKFLOW § App Mode). Graph/API under `H:\AI_Models\ComfyUI\workflows\` for debug/CLI:
+    - Fast iterate → `z-image-turbo-Q4-AppMode.json` / `txt2img-z-image-turbo.json`
+    - Fast keep → `z-image-turbo-BF16-AppMode.json` / `txt2img-z-image-turbo-bf16.json`
+    - Best quality → `qwen-image-2512-AppMode.json` / `txt2img-qwen-image-2512.json`
+    - Local edit → `edit-qwen-2511-AppMode.json` / `edit-image-qwen-2511.json`
+    - Flux → `flux-klein-9B-AppMode.json` / `flux-klein-4B-AppMode.json` (+ matching txt2img JSON)
+15. Stack: ComfyUI **0.31.0** · torch **2.11.0+cu128** — never `pip install torch` from default PyPI.
+
+## Boundaries
+
+16. Do not apply MSC **deploy** rules unless working in the MSC repo.
+17. Log durable style/model decisions to project Mem0 + vault `[[Local-image-model-picker-16GB]]`.

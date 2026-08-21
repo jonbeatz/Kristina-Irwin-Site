@@ -1,0 +1,115 @@
+{
+  "project_mcp_servers": {
+    "filesystem": {
+      "type": "filesystem",
+      "description": "Read, write, and manage local files and directories — file reads, writes, renames, deletions, search, and directory listings.",
+      "enabled": true
+    },
+    "github": {
+      "type": "github",
+      "description": "GitHub API integration — search repos, read issues/PRs, check CI, create releases, and manage repos.",
+      "enabled": true,
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "must be set in .env.local"
+      }
+    },
+    "context7": {
+      "type": "context7",
+      "description": "Version-accurate library/framework docs (anti-hallucination) — resolve library ids and fetch current API signatures, config, and migration guidance. Pairs with the always-on library-docs rule. 2026 baseline MCP.",
+      "enabled": true
+    },
+    "tavily": {
+      "type": "tavily",
+      "description": "Web search for up-to-date information — documentation, news, tutorials, and technical answers.",
+      "enabled": true,
+      "env": {
+        "TAVILY_API_KEY": "must be set in .env.local"
+      }
+    },
+    "hostinger-dns": {
+      "type": "hostinger-dns",
+      "description": "Hostinger DNS management — create, update, and delete DNS records for domains.",
+      "enabled": true,
+      "env": {
+        "HOSTINGER_API_TOKEN": "must be set in .env.local"
+      }
+    },
+    "hostinger-hosting": {
+      "type": "hostinger-hosting",
+      "description": "Hostinger web hosting management — manage hosting plans, websites, and server resources.",
+      "enabled": true,
+      "env": {
+        "HOSTINGER_API_TOKEN": "must be set in .env.local"
+      }
+    },
+    "hostinger-vps": {
+      "type": "hostinger-vps",
+      "description": "Hostinger VPS management — create, manage, and monitor virtual private servers.",
+      "enabled": true,
+      "env": {
+        "HOSTINGER_API_TOKEN": "must be set in .env.local"
+      }
+    },
+    "hostinger-domains": {
+      "type": "hostinger-domains",
+      "description": "Hostinger domain management — search, register, transfer, and manage domain names.",
+      "enabled": true,
+      "env": {
+        "HOSTINGER_API_TOKEN": "must be set in .env.local"
+      }
+    },
+    "sequential-thinking": {
+      "type": "sequential-thinking",
+      "description": "Multi-step reasoning for complex planning — break down problems, evaluate approaches, and document trade-offs.",
+      "enabled": true
+    },
+    "stripe": {
+      "type": "stripe",
+      "description": "Stripe payment processing — create products, prices, checkout sessions, manage subscriptions, and query payment data.",
+      "enabled": true,
+      "env": {
+        "STRIPE_API_KEY": "sk if using server mode; pk if using client mode"
+      }
+    },
+    "firebase": {
+      "type": "firebase",
+      "description": "Firebase project management — authentication, Firestore, storage, hosting, and analytics configuration.",
+      "enabled": true
+    },
+    "fetch": {
+      "type": "fetch",
+      "description": "HTTP fetch tool — retrieve content from URLs for documentation, APIs, and web resources.",
+      "enabled": true
+    },
+    "playwright": {
+      "type": "playwright",
+      "description": "Slot 1 — localhost dev automation (Playwright Chrome, :3000/:3001). Isolated browser, not Brave profile.",
+      "enabled": true
+    },
+    "playwright-brave": {
+      "type": "playwright-extension",
+      "description": "Slot 3 — real Brave/Chrome tab via Playwright MCP Bridge extension + --extension. Share tab when agent connects.",
+      "enabled": true
+    },
+    "pilot": {
+      "type": "pilot-mcp",
+      "description": "Slot 4 experimental — pilot-mcp + Pilot extension. pilot_tabs, handoff/resume, lean snapshots. PILOT_PROFILE=standard|core|full.",
+      "enabled": true
+    },
+    "desktop-commander": {
+      "type": "desktop-commander",
+      "description": "Desktop command execution — run terminal commands, manage processes, and control the development environment.",
+      "enabled": true
+    },
+    "comfyui": {
+      "type": "comfyui-mcp",
+      "description": "Local ComfyUI control plane (comfyui-mcp via npx) — workflow execution, model/node management on :8188. JonBeatz / local-GPU profiles only; disabled by default on bootstrap. Requires ComfyUI running (npm run comfy:start). Not Comfy Cloud.",
+      "enabled": false,
+      "env": {
+        "COMFYUI_URL": "http://127.0.0.1:8188",
+        "COMFYUI_PATH": "must match COMFYUI_ROOT in .env.local",
+        "COMFYUI_ALWAYS_RESTART": "false"
+      }
+    }
+  }
+}

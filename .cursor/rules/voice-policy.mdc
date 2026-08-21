@@ -1,0 +1,46 @@
+---
+description: Draven voice — when to speak aloud (Edge Liam ritual-only; Omni optional)
+alwaysApply: true
+---
+
+# Draven voice policy (JonBeatz)
+
+## Default voices
+
+| Priority | Engine | When |
+|----------|--------|------|
+| **Primary** | **Edge** `en-CA-LiamNeural` (same as Hermes Desktop) | Every allowed speak |
+| **Fallback** | **OmniVoice** (dialed-in British male, CPU) | Only if Edge fails |
+
+**OmniVoice is still installed** with your saved knobs in `.env.local`. To use it as primary again, see **Restore OmniVoice** in `.cursor/docs/VOICE-WORKFLOW.md`.
+
+## When to speak (allowed)
+
+| Trigger | Action |
+|---------|--------|
+| **Start Project** ritual (cold boot) | `npm run draven:speak -- "..."` once (greeting) |
+| **End Project** ritual (day-end) | `npm run draven:speak -- "..."` once (short farewell) |
+| Jon says **speak**, **say**, **talk this**, **read aloud** | `npm run draven:speak -- "<exact text>"` |
+| Critical **Mem0 / stack errors** | Only if `DRAVEN_VOICE_ERRORS=1` (default on) |
+
+## When NOT to speak
+
+- **Open Project** / **Resume Session** — silent resume.
+- **Close Project** / **Close Session** — silent handoff.
+- **Never** read ordinary chat replies or summaries aloud.
+- **Never** speak after `mem0:add`, `mem0:search`, or successful Mem0 recall.
+- **Never** auto-speak Hermes Desktop / Telegram agent responses (`auto_tts: false` in Hermes config).
+- **Never** start OmniVoice daemon at PC boot — only if Omni is primary or fallback fires; stop on End Project.
+
+## Commands
+
+```powershell
+npm run draven:speak -- "text"              # Edge Liam (Omni fallback on failure)
+npm run draven:speak -- -OmniOnly "text"    # force OmniVoice once (premium)
+npm run draven:omni-daemon                  # only if using Omni as primary
+npm run draven:omni-daemon -- -Stop         # free RAM (also runs on session:stop)
+```
+
+`jarvis:*` aliases deprecated — use `draven:*` equivalents.
+
+See **`.cursor/docs/VOICE-WORKFLOW.md`** for restore steps, errors, and resource notes.
