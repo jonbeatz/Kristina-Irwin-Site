@@ -49,11 +49,11 @@ export default function Home() {
           <div className="ki-hero-photo">
             <div className="ki-hero-frame">
               <Image
-                src="/images/kristina-portrait.jpg"
-                alt="Kristina Irwin seated at a table with books, smiling"
+                src="/images/kristina-hero.png"
+                alt="Kristina Irwin, smiling in a black blazer"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
-                style={{ objectFit: "contain", objectPosition: "center bottom" }}
+                style={{ objectFit: "cover", objectPosition: "center 22%" }}
                 priority
               />
             </div>
@@ -138,18 +138,18 @@ export default function Home() {
             <div className="ki-photos">
               <Image
                 className="ki-photo-main"
-                src="/images/kristina-work.jpg"
-                alt="Kristina Irwin in a red blazer working at a laptop"
-                width={1200}
-                height={1600}
+                src="/images/kristina-work.png"
+                alt="Kristina Irwin in a red blazer smiling while looking at a laptop"
+                width={1178}
+                height={1335}
                 sizes="(max-width: 900px) 88vw, 40vw"
               />
               <Image
                 className="ki-photo-inset"
-                src="/images/kristina-phone.jpg"
-                alt="Kristina Irwin taking a phone call while writing on a legal pad"
-                width={900}
-                height={900}
+                src="/images/kristina-phone.png"
+                alt="Kristina Irwin on a phone call while writing on a legal pad"
+                width={1254}
+                height={1254}
                 sizes="(max-width: 900px) 50vw, 22vw"
               />
             </div>
@@ -195,8 +195,7 @@ export default function Home() {
               </a>
             </div>
             <p className="ki-note">
-              Sample contact links—replace with the campaign&apos;s official email, donation page, and
-              social accounts.
+              <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
             </p>
           </div>
         </section>

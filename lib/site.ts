@@ -3,7 +3,7 @@ export const SITE = {
   office: "Los Angeles Community College District Board of Trustees",
   seat: "Seat 2",
   election: "November 3, 2026",
-  email: "info@kristinairwin.com",
+  email: "kristina@kristinairwin.com",
 }
 
 export const NAV = [

@@ -29,6 +29,21 @@ export const metadata: Metadata = {
   title: "Kristina Irwin | LACCD Board of Trustees, Seat 2",
   description:
     "Kristina Irwin for Los Angeles Community College District Board of Trustees, Seat 2. Safe, accountable, affordable colleges — focused on preparing every student for success.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://kristinairwin.com",
+    siteName: "Kristina Irwin",
+    title: "Kristina Irwin | LACCD Board of Trustees, Seat 2",
+    description:
+      "Kristina Irwin for Los Angeles Community College District Board of Trustees, Seat 2. Safe, accountable, affordable colleges — focused on preparing every student for success.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kristina Irwin | LACCD Board of Trustees, Seat 2",
+    description:
+      "Kristina Irwin for Los Angeles Community College District Board of Trustees, Seat 2. Safe, accountable, affordable colleges — focused on preparing every student for success.",
+  },
 }
 
 export const viewport: Viewport = {

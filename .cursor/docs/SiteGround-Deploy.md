@@ -5,7 +5,7 @@ Production host for **https://kristinairwin.com**. Static Next export (`out/`) u
 > Secrets live only in **`.env.local`** (gitignored) and  
 > `D:\Hermes\projects\_core-scripts\siteground-access\SiteGround_SFTP.md`.
 
-**Live (2026-08-21):** LACCD Board Seat 2 one-pager is on `public_html`. Placeholders (committee / FPPC / donate) are still on the page.
+**Live (2026-08-22):** LACCD Board Seat 2 one-pager on `public_html` (v2 photos, email, favicon, OG card). Placeholders (committee / FPPC / donate) are still on the page.
 
 ## Full ship process (repeat this)
 

@@ -2,12 +2,13 @@
 
 ## Unreleased — branch `Kristina-Irwin-Site-Project-v2`
 
-- Active development on **v2** (2.0.0). Live site stays the v1 one-pager until the next SiteGround deploy.
+- Still waiting on Kristina: official committee name, FPPC ID, donate vs volunteer for Join, Endorse destination.
 
 ## v2.0.0 — 2026-08-22
 
 - Branch cut: freeze `Kristina-Irwin-Site-Project-v1` @ `1865e60`; active `Kristina-Irwin-Site-Project-v2`.
 - Pre-cut backup `kristina-irwin-site-project-v1-b`.
+- **Live ship (same day):** hero/about photos (`image1b/2b/3b`), email `kristina@kristinairwin.com`, cropped LA+book favicon, FPPC box at 50% opacity, OG/Twitter card from `mobileLink.jpg`.
 
 ## v1.0.0 — 2026-08-21
 
