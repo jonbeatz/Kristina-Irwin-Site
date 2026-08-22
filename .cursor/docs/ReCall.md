@@ -2,10 +2,11 @@
 
 ## Current Focus
 
-- [2026-08-21] **LIVE** https://kristinairwin.com — LACCD Board of Trustees, Seat 2 one-pager. Uploaded with `--clean` + SuperCacher PURGE. Placeholders still on the page (committee / FPPC / donate).
-- Working branch: `Kristina-Irwin-Site-Project-v1`.
-- **Local:** Next.js + Node (`web:dev` :3000). **Live:** static `out/` via SFTP. Shared SiteGround does **not** run Node.js.
-- **Next:** real committee name, FPPC ID, donate/email/socials when Kristina provides them; then rebuild + `siteground:deploy:clean` + `siteground:purge-cache`.
+- [2026-08-21 close] **LIVE** https://kristinairwin.com — LACCD Seat 2 one-pager verified (HTML SHA match, assets 200, Senate routes 404). HEAD `668da58` on `Kristina-Irwin-Site-Project-v1` (pushed).
+- **Fleet:** left running (LiteLLM :4000, ngrok :4040, LM Studio :1234) — use **Open Project** in next workspace.
+- **Local:** Next.js + Node (`web:dev` :3000). **Live:** static `out/` via SFTP. SiteGround does **not** run Node. Preview `out/` with `site:preview` (:5066), not `file://`.
+- **Next:** real committee name, FPPC ID, donate/email/socials when Kristina provides them; then `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
+- SiteGround keys also in `_core-scripts/.env.local.master` section **52** (gitignored master).
 
 ## One-pager (what shipped)
 

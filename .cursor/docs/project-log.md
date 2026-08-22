@@ -2,6 +2,7 @@
 
 | Date | Session | Key outcomes |
 |------|---------|-------------|
+| 2026-08-21 | Close / handoff | Live verified; deploy docs + `siteground:purge-cache` pushed `668da58`; SiteGround block copied into `_core-scripts/.env.local.master` §52. Fleet left running. |
 | 2026-08-21 | Live on SiteGround | `--clean` upload of `out/` + SuperCacher PURGE via one-shot PHP (SSH exec denied). https://kristinairwin.com is LACCD one-pager. |
 | 2026-08-21 | First G: backup | Standard `kristina-irwin-site-project-v1-a` → `G:\Hermes_Project_BackUpz\Kristina-Irwin-Site\` (skips `archive/`). Verify OK. |
 | 2026-08-21 | Docs + memory harvest | ReCall, ONE-PAGER, changelog, vault hub/session, Mem0, Draven, Mnemosyne (`9a674fa5cda75b1a`). Still not SiteGround. |

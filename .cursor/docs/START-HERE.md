@@ -5,7 +5,7 @@ If an agent is new to this profile, read this file first.
 **Profile root:** D:\\Hermes\\projects\\Kristina-Irwin-Site
 **Hermes slug:** kristina-irwin-site
 
-**Now (2026-08-21):** **LIVE** https://kristinairwin.com — LACCD Seat 2 one-pager. Working branch `Kristina-Irwin-Site-Project-v1`. After any upload run `npm run siteground:purge-cache`. Placeholders still on the page.
+**Now (2026-08-21 close):** **LIVE** https://kristinairwin.com. Branch `Kristina-Irwin-Site-Project-v1` @ `668da58`. Redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`. Placeholders still on the page. Resume with **Open Project**.
 
 ---
 
