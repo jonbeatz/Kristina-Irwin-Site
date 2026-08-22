@@ -3,11 +3,12 @@
 ## Current Focus
 
 - [2026-08-22] **Active:** `Kristina-Irwin-Site-Project-v2` (2.0.0). **Frozen:** `Kristina-Irwin-Site-Project-v1` @ `1865e60`.
-- **LIVE** https://kristinairwin.com — v2 nits are on SiteGround (photos, email, cropped favicon, 50% FPPC box, OG share image).
-- **Session closed (End Project).** Git `330a9f6` on v2. Backup `kristina-irwin-site-project-v1-c`.
-- **Next:** real committee name, FPPC ID, donate vs volunteer for Join, what Endorse should do — when Kristina provides them. Then `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
-- Local: `web:dev` **:3000**; static preview `site:preview` **:5066**. Never `web:build` while `:3000` is up.
-- SiteGround keys in `_core-scripts/.env.local.master` section **52**.
+- **LIVE** https://kristinairwin.com — v2 nits + SEO tags (new meta description, canonical, robots/sitemap, JSON-LD). Involve headline keeps **Los Angeles students** on one line.
+- **Google/DuckDuckGo** still show old Senate D24 copy until they recrawl. Playbook: `.cursor/docs/SEO.md`. Change snippet via `SITE.title` / `SITE.description` in `lib/site.ts` then redeploy.
+- Client contact spelling: **Yolando** (not Yolanda) + Kristina.
+- **Next:** official search-bio if they send one; committee / FPPC / donate vs volunteer / Endorse. Then `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`. Google Search Console request-indexing when Jon has access.
+- Local: `web:dev` **:3000**. Never `web:build` while `:3000` is up.
+- SiteGround keys in `_core-scripts/.env.local.master` section **52**. Backup `kristina-irwin-site-project-v1-c`.
 
 ## One-pager (what shipped)
 
@@ -23,7 +24,8 @@ Single page: sticky/full-width nav, hero, vote bar, Why, Priorities, About, Invo
 | Email | `kristina@kristinairwin.com` (`lib/site.ts`). Join / Endorse mailto that. Email shown under buttons as `.ki-note`. |
 | Favicon | Cropped **LA + book** in `app/icon.png` / `app/favicon.ico` / `app/apple-icon.png`. Tab slot is fixed; fill the square. **Never** also put `public/favicon.ico` (Next 500 conflict). Source pack: `.cursor/assets/KI-Photos/favicon_io/`. |
 | Link preview | `app/opengraph-image.jpg` + `app/twitter-image.jpg` from `.cursor/assets/KI-Photos/Mobile/mobileLink.jpg` (1200×630). iMessage caches old cards — send a **new** message to see it. |
-| Headline | Community = peach **script**; Colleges. = same peach, **serif**. |
+| Headline | Community = peach **script**; Colleges. = same peach, **serif**. Involve h2: `Los&nbsp;Angeles&nbsp;students`. |
+| SEO | `SITE.title` / `SITE.description` in `lib/site.ts`. Canonical apex. `public/robots.txt` + `public/sitemap.xml` (not `app/robots.ts` — static export rejects those routes). JSON-LD Person + WebSite in `app/layout.tsx`. |
 | Gutter | `--ki-gutter: 52px` |
 | Placeholders | Footer committee/FPPC at **50% opacity**; donate deferred. |
 
@@ -51,6 +53,8 @@ Full steps: `.cursor/docs/SiteGround-Deploy.md`.
 - SuperCacher flush is part of every deploy, not optional.
 - Jon approved live ship **with** FPPC placeholder still on the page.
 - Tab favicons cannot be made larger than the browser slot — crop the mark to fill the square.
+- Search snippets: we publish tags; Google recrawls on its own. Do not rebuild old Senate sitelink pages.
+- Client: **Yolando** + Kristina.
 
 ## Git
 

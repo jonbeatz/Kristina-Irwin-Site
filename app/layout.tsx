@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next"
 import { Allura, Cormorant_Garamond, Source_Sans_3 } from "next/font/google"
+import { SITE } from "@/lib/site"
 import "./globals.css"
 
 const cormorant = Cormorant_Garamond({
@@ -25,24 +26,23 @@ const script = Allura({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://kristinairwin.com"),
-  title: "Kristina Irwin | LACCD Board of Trustees, Seat 2",
-  description:
-    "Kristina Irwin for Los Angeles Community College District Board of Trustees, Seat 2. Safe, accountable, affordable colleges — focused on preparing every student for success.",
+  metadataBase: new URL(SITE.url),
+  title: SITE.title,
+  description: SITE.description,
+  alternates: { canonical: SITE.url },
+  robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://kristinairwin.com",
-    siteName: "Kristina Irwin",
-    title: "Kristina Irwin | LACCD Board of Trustees, Seat 2",
-    description:
-      "Kristina Irwin for Los Angeles Community College District Board of Trustees, Seat 2. Safe, accountable, affordable colleges — focused on preparing every student for success.",
+    url: SITE.url,
+    siteName: SITE.name,
+    title: SITE.title,
+    description: SITE.description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kristina Irwin | LACCD Board of Trustees, Seat 2",
-    description:
-      "Kristina Irwin for Los Angeles Community College District Board of Trustees, Seat 2. Safe, accountable, affordable colleges — focused on preparing every student for success.",
+    title: SITE.title,
+    description: SITE.description,
   },
 }
 
@@ -53,10 +53,37 @@ export const viewport: Viewport = {
   themeColor: "#ffffff",
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      name: SITE.name,
+      url: SITE.url,
+      description: SITE.description,
+    },
+    {
+      "@type": "Person",
+      name: SITE.name,
+      url: SITE.url,
+      email: SITE.email,
+      jobTitle: `Candidate for ${SITE.office}, ${SITE.seat}`,
+      description: SITE.description,
+      image: `${SITE.url}/opengraph-image.jpg`,
+    },
+  ],
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${source.variable} ${script.variable}`} suppressHydrationWarning>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   )
 }

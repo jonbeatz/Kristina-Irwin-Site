@@ -2,7 +2,9 @@
 
 ## Unreleased — branch `Kristina-Irwin-Site-Project-v2`
 
-- Still waiting on Kristina: official committee name, FPPC ID, donate vs volunteer for Join, Endorse destination.
+- Still waiting on Kristina: official committee name, FPPC ID, donate vs volunteer for Join, Endorse destination; optional shorter official Google bio.
+- Search meta live: `SITE.description` professional/businesswoman copy; `robots.txt` + `sitemap.xml`; JSON-LD. SERPs still Senate until recrawl.
+- Involve headline: non-breaking spaces keep “Los Angeles students” together (`aff1af5`).
 
 ## v2.0.0 — 2026-08-22
 

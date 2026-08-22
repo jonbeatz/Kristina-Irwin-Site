@@ -34,7 +34,7 @@ This repo is a **one-page** rebuild from `.cursor/assets/KI-MockUps/`. The old m
 
 Kristina Irwin — Los Angeles Community College District Board of Trustees, **Seat 2** (election **November 3, 2026**). Committee name, FPPC ID, and donation/endorse URLs: confirm with client before shipping (placeholders on the page).
 
-**Build status (2026-08-22):** Active line is `Kristina-Irwin-Site-Project-v2` (2.0.0). One-pager is **live** at https://kristinairwin.com with v2 photos, `kristina@kristinairwin.com`, cropped favicon, and OG share image. Design locks: `.cursor/docs/ONE-PAGER.md` + `.cursor/docs/ReCall.md`. Placeholders remain until Kristina supplies committee / FPPC / donate vs volunteer. Redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
+**Build status (2026-08-22):** Active line is `Kristina-Irwin-Site-Project-v2` (2.0.0). Live https://kristinairwin.com has v2 photos, email, favicon, OG card, and **new search meta** (see `.cursor/docs/SEO.md`). Google still caches Senate D24 until recrawl. Placeholders remain until Kristina supplies committee / FPPC / donate vs volunteer. Redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
 
 **How it runs:** Local = Next.js + Node (`web:dev`). SiteGround = static export only (`KI_STATIC=1` → `out/` → SFTP). Shared SiteGround does not host Node.js.
 
@@ -44,8 +44,9 @@ Kristina Irwin — Los Angeles Community College District Board of Trustees, **S
 2. `.cursor/docs/START-HERE.md`
 3. `.cursor/docs/SiteGround-Deploy.md`
 4. `.cursor/docs/ONE-PAGER.md` — design locks
-5. `.cursor/docs/ReCall.md`
-6. Archive refs under `.cursor/docs/archive-reference/` (read-only history)
+5. `.cursor/docs/SEO.md` — search snippet / meta description
+6. `.cursor/docs/ReCall.md`
+7. Archive refs under `.cursor/docs/archive-reference/` (read-only history)
 
 ## Isolation
 

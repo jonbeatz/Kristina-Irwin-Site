@@ -4,6 +4,16 @@ export const SITE = {
   seat: "Seat 2",
   election: "November 3, 2026",
   email: "kristina@kristinairwin.com",
+  url: "https://kristinairwin.com",
+  /** Blue link in Google. Keep under ~60 characters. */
+  title: "Kristina Irwin | LACCD Board of Trustees, Seat 2",
+  /**
+   * Search snippet + Open Graph description.
+   * Change this string when Kristina supplies official copy, then redeploy.
+   * Google often truncates around 150–160 characters (this one is longer on purpose).
+   */
+  description:
+    "Kristina Irwin is a Los Angeles professional, businesswoman, and community advocate. She brings the habits of real work—listening, following through, and keeping commitments—to public service.",
 }
 
 export const NAV = [

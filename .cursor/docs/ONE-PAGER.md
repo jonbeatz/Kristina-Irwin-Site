@@ -42,6 +42,10 @@ Living notes for the LACCD Seat 2 campaign page. **TRUTH.md** still wins if this
 - Favicon: crop the district seal to **LA + book** so it fills the tab square. Files: `app/favicon.ico`, `app/icon.png`, `app/apple-icon.png`. Do **not** also add `public/favicon.ico`.
 - Link preview: `app/opengraph-image.jpg` / `app/twitter-image.jpg` from `Mobile/mobileLink.jpg` (1200×630 navy campaign lockup).
 
+## Search snippet (Google / DuckDuckGo)
+
+Edit **`SITE.title`** and **`SITE.description`** in `lib/site.ts`, then redeploy. Details: `.cursor/docs/SEO.md`. Google still shows old Senate copy until it recrawls.
+
 ## Involve / footer
 
 - Join + Endorse mailto `kristina@kristinairwin.com`

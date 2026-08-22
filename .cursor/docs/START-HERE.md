@@ -5,7 +5,7 @@ If an agent is new to this profile, read this file first.
 **Profile root:** D:\\Hermes\\projects\\Kristina-Irwin-Site
 **Hermes slug:** kristina-irwin-site
 
-**Now (2026-08-22):** Active `Kristina-Irwin-Site-Project-v2` (2.0.0). Frozen v1 @ `1865e60`. **LIVE** https://kristinairwin.com with v2 photos, email, favicon, and link-preview card. Redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`. Placeholders still on the page (committee / FPPC / donate).
+**Now (2026-08-22):** Active `Kristina-Irwin-Site-Project-v2` (2.0.0). Frozen v1 @ `1865e60`. **LIVE** https://kristinairwin.com with v2 photos, email, favicon, OG card, and new search meta (`lib/site.ts`). Google still shows old Senate copy until recrawl. Redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
 
 ---
 
