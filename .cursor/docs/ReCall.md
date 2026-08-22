@@ -4,6 +4,7 @@
 
 - [2026-08-22] **Active:** `Kristina-Irwin-Site-Project-v2` (2.0.0). **Frozen:** `Kristina-Irwin-Site-Project-v1` @ `1865e60`.
 - **LIVE** https://kristinairwin.com — v2 nits are on SiteGround (photos, email, cropped favicon, 50% FPPC box, OG share image).
+- **Session closed (End Project).** Git `330a9f6` on v2. Backup `kristina-irwin-site-project-v1-c`.
 - **Next:** real committee name, FPPC ID, donate vs volunteer for Join, what Endorse should do — when Kristina provides them. Then `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
 - Local: `web:dev` **:3000**; static preview `site:preview` **:5066**. Never `web:build` while `:3000` is up.
 - SiteGround keys in `_core-scripts/.env.local.master` section **52**.

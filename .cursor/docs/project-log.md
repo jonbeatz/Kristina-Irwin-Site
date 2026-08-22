@@ -2,6 +2,7 @@
 
 | Date | Session | Key outcomes |
 |------|---------|-------------|
+| 2026-08-22 | End Project | v2 nits live + docs/mem0/vault + git `330a9f6` pushed. Quick backup `v1-c`. Next: committee / FPPC / donate vs volunteer from Kristina. |
 | 2026-08-22 | v2 nits live | Photos (`image1b/2b/3b`), `kristina@kristinairwin.com`, cropped favicon, 50% FPPC box, OG card from `mobileLink.jpg`. SiteGround `--clean` + purge. Branch cut + backup `v1-b` earlier same day. |
 | 2026-08-22 | Branch cut v2 | Freeze `Kristina-Irwin-Site-Project-v1` @ `1865e60`. Active `Kristina-Irwin-Site-Project-v2` at **2.0.0**. Backup `kristina-irwin-site-project-v1-b`. `main` untouched. |
 | 2026-08-21 | Close / handoff | Live verified; deploy docs + `siteground:purge-cache` pushed `668da58`; SiteGround block copied into `_core-scripts/.env.local.master` §52. Fleet left running. |
