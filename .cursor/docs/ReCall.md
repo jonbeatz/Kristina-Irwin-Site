@@ -4,11 +4,12 @@
 
 - [2026-08-22] **Active:** `Kristina-Irwin-Site-Project-v2` (2.0.0). **Frozen:** `Kristina-Irwin-Site-Project-v1` @ `1865e60`.
 - **LIVE** https://kristinairwin.com — v2 nits + SEO tags (new meta description, canonical, robots/sitemap, JSON-LD). Involve headline keeps **Los Angeles students** on one line.
-- **Google/DuckDuckGo** still show old Senate D24 copy until they recrawl. Playbook: `.cursor/docs/SEO.md`. Change snippet via `SITE.title` / `SITE.description` in `lib/site.ts` then redeploy.
+- **Google/DuckDuckGo** still show old Senate D24 copy until they recrawl. Playbook: `.cursor/docs/SEO.md`. Change snippet via `SITE.title` / `SITE.description` in `lib/site.ts` then redeploy. Yolando asked about WP Settings title/tagline — site is not WordPress; those fields are already on the new site.
 - Client contact spelling: **Yolando** (not Yolanda) + Kristina.
-- **Next:** official search-bio if they send one; committee / FPPC / donate vs volunteer / Endorse. Then `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`. Google Search Console request-indexing when Jon has access.
+- **Next:** official search-bio if they send one; committee / FPPC / donate vs volunteer / Endorse. Google Search Console request-indexing when Jon has access.
+- **Fleet:** left running (LiteLLM :4000, ngrok :4040, LM Studio :1234) — use Open Project in next workspace.
 - Local: `web:dev` **:3000**. Never `web:build` while `:3000` is up.
-- SiteGround keys in `_core-scripts/.env.local.master` section **52**. Backup `kristina-irwin-site-project-v1-c`.
+- SiteGround keys in `_core-scripts/.env.local.master` section **52**. Backup `kristina-irwin-site-project-v1-c`. Git HEAD `9ecffb0`.
 
 ## One-pager (what shipped)
 
