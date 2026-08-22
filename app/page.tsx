@@ -181,7 +181,7 @@ export default function Home() {
         <section id="involve" className="ki-involve">
           <div className="ki-involve-inner">
             <p className="ki-label ki-label-soft">Move forward—together</p>
-            <h2>Help build a stronger future for Los Angeles students.</h2>
+            <h2>Help build a stronger future for Los&nbsp;Angeles&nbsp;students.</h2>
             <p className="ki-involve-lede">
               Join Kristina&apos;s campaign for opportunity, excellence, accountability, and
               common&nbsp;sense.
