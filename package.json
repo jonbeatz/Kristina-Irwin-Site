@@ -1,6 +1,6 @@
 {
   "name": "kristina-irwin-site-profile",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Kristina Irwin one-page website — client SiteGround rebuild (successor to archived Kristina-Irwin).",
   "scripts": {
     "hermes:desktop-ready": "powershell -ExecutionPolicy Bypass -File D:\\Hermes\\projects\\JonBeatz\\scripts\\Start-Hermes-FullControl-Desktop.ps1",

@@ -2,11 +2,10 @@
 
 ## Current Focus
 
-- [2026-08-21 close] **LIVE** https://kristinairwin.com — LACCD Seat 2 one-pager verified (HTML SHA match, assets 200, Senate routes 404). HEAD `668da58` on `Kristina-Irwin-Site-Project-v1` (pushed).
-- **Fleet:** left running (LiteLLM :4000, ngrok :4040, LM Studio :1234) — use **Open Project** in next workspace.
-- **Local:** Next.js + Node (`web:dev` :3000). **Live:** static `out/` via SFTP. SiteGround does **not** run Node. Preview `out/` with `site:preview` (:5066), not `file://`.
+- [2026-08-22] **Active:** `Kristina-Irwin-Site-Project-v2` (2.0.0). **Frozen:** `Kristina-Irwin-Site-Project-v1` @ `1865e60`.
+- **LIVE** https://kristinairwin.com — LACCD Seat 2 one-pager (v1 ship). Live unchanged until next SiteGround deploy.
 - **Next:** real committee name, FPPC ID, donate/email/socials when Kristina provides them; then `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
-- SiteGround keys also in `_core-scripts/.env.local.master` section **52** (gitignored master).
+- SiteGround keys in `_core-scripts/.env.local.master` section **52**. Preview `out/` with `site:preview` (:5066), not `file://`.
 
 ## One-pager (what shipped)
 
@@ -47,7 +46,7 @@ Full steps: `.cursor/docs/SiteGround-Deploy.md`.
 
 ## Git
 
-- Working branch: `Kristina-Irwin-Site-Project-v1`
+- Working branch: `Kristina-Irwin-Site-Project-v2`
 - `archive/` gitignored and skipped by backups.
 
 ---

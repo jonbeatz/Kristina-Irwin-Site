@@ -2,6 +2,7 @@
 
 | Date | Session | Key outcomes |
 |------|---------|-------------|
+| 2026-08-22 | Branch cut v2 | Freeze `Kristina-Irwin-Site-Project-v1` @ `1865e60`. Active `Kristina-Irwin-Site-Project-v2` at **2.0.0**. Backup `kristina-irwin-site-project-v1-b`. `main` untouched. |
 | 2026-08-21 | Close / handoff | Live verified; deploy docs + `siteground:purge-cache` pushed `668da58`; SiteGround block copied into `_core-scripts/.env.local.master` §52. Fleet left running. |
 | 2026-08-21 | Live on SiteGround | `--clean` upload of `out/` + SuperCacher PURGE via one-shot PHP (SSH exec denied). https://kristinairwin.com is LACCD one-pager. |
 | 2026-08-21 | First G: backup | Standard `kristina-irwin-site-project-v1-a` → `G:\Hermes_Project_BackUpz\Kristina-Irwin-Site\` (skips `archive/`). Verify OK. |

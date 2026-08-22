@@ -1,7 +1,9 @@
 # TRUTH.md — Kristina-Irwin-Site
 
-**Version:** 1.0.0  
+**Version:** 2.0.0  
 **Profile root:** `D:\Hermes\projects\Kristina-Irwin-Site`  
+**Active branch:** `Kristina-Irwin-Site-Project-v2`  
+**Frozen:** `Kristina-Irwin-Site-Project-v1` @ `1865e60`  
 **Live:** https://kristinairwin.com (SiteGround — client-owned)  
 **GitHub:** https://github.com/jonbeatz/Kristina-Irwin-Site (private)  
 **Archive (live multi-page site):** `archive/live-site-2026-06/` (local only — not git, not backups)  
@@ -10,7 +12,7 @@
 ## What this is
 
 Client website for **Kristina Irwin** — **LACCD Board of Trustees, Seat 2** (November 3, 2026).  
-This repo is a **one-page** rebuild from `.cursor/assets/KI-MockUps/`. The multi-page Senate campaign still live on SiteGround is parked in **`archive/live-site-2026-06/`**. Do not mix the two.
+This repo is a **one-page** rebuild from `.cursor/assets/KI-MockUps/`. The old multi-page Senate campaign is parked in **`archive/live-site-2026-06/`**. Do not mix the two.
 
 ## Hard boundaries
 
@@ -30,9 +32,9 @@ This repo is a **one-page** rebuild from `.cursor/assets/KI-MockUps/`. The multi
 
 ## Candidate (standing facts)
 
-Kristina Irwin — Los Angeles Community College District Board of Trustees, **Seat 2** (election **November 3, 2026**). Committee name, FPPC ID, and donation/endorse URLs: confirm with client before shipping (placeholders on the page). Live kristinairwin.com is still the prior Senate site until we deploy.
+Kristina Irwin — Los Angeles Community College District Board of Trustees, **Seat 2** (election **November 3, 2026**). Committee name, FPPC ID, and donation/endorse URLs: confirm with client before shipping (placeholders on the page).
 
-**Build status (2026-08-21):** One-pager is **live** at https://kristinairwin.com (LACCD Seat 2). Design locks: `.cursor/docs/ONE-PAGER.md` + `.cursor/docs/ReCall.md`. Placeholders remain until Kristina supplies committee / FPPC / donate. Redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
+**Build status (2026-08-22):** Active line is `Kristina-Irwin-Site-Project-v2` (2.0.0). One-pager is **live** at https://kristinairwin.com from the v1 ship. Design locks: `.cursor/docs/ONE-PAGER.md` + `.cursor/docs/ReCall.md`. Placeholders remain until Kristina supplies committee / FPPC / donate. Redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
 
 **How it runs:** Local = Next.js + Node (`web:dev`). SiteGround = static export only (`KI_STATIC=1` → `out/` → SFTP). Shared SiteGround does not host Node.js.
 

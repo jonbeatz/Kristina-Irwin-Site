@@ -9,7 +9,8 @@
 | Branch | Purpose |
 |--------|---------|
 | **`main`** | Stable default, releases |
-| **`Kristina-Irwin-Site-Project-v1`** | Active development milestone |
+| **`Kristina-Irwin-Site-Project-v1`** | Frozen milestone @ `1865e60` |
+| **`Kristina-Irwin-Site-Project-v2`** | Active development milestone |
 
 ---
 
