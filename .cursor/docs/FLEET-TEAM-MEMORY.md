@@ -67,7 +67,7 @@ Switching Cursor folders does **not** change the vault bridge. Leave notes there
 
 When the profile uses LiteLLM `http://127.0.0.1:4000/v1`:
 
-1. **API key** = real master `sk-jonbeatz-deepseek-2026` (never a chat-redacted `«redacted:sk-…»` string in YAML)
+1. **API key** = real master `<MSC_LITELLM_MASTER_KEY>` (never a chat-redacted `«redacted:sk-…»` string in YAML)
 2. DeepSeek provider = **Flash + Pro only** + **`discover_models: false`**
 3. **Never** add a second LiteLLM OpenRouter provider (same URL → Hermes merges → floods DeepSeek Direct)
 4. New OpenRouter models → **native** OpenRouter provider / aliases (Hermes), or Cursor `*-or` via LiteLLM
@@ -142,7 +142,7 @@ npm run fleet:status
 npm run fleet:sync
 
 # Hermes profiles (API key + discover_models) — ask Hermes or Cursor audit
-# Expect: real sk-jonbeatz-deepseek-2026, discover_models: false on :4000 DeepSeek providers
+# Expect: real <MSC_LITELLM_MASTER_KEY>, discover_models: false on :4000 DeepSeek providers
 ```
 
 Hub-only deep matrix (JonBeatz): `.cursor/docs/MEMORY-SYSTEMS-HEALTH.md`, `.cursor/docs/TEAM-CURSOR-HERMES.md`, `.cursor/docs/HERMES-MODEL-UPDATE-RUNBOOK.md`

@@ -135,7 +135,7 @@ Run `npm run ecosystem:audit` for exact SET/EMPTY per file.
 
 | Check | What | Where |
 |-------|------|-------|
-| **Master key policy** | All 7 profiles use `sk-jonbeatz-deepseek-2026` + `deepseek-v4-pro` | `%LOCALAPPDATA%\hermes\profiles\*\config.yaml` |
+| **Master key policy** | All 7 profiles use `<MSC_LITELLM_MASTER_KEY>` + `deepseek-v4-pro` | `%LOCALAPPDATA%\hermes\profiles\*\config.yaml` |
 | **Watchdog** | Cron every 6h — probes LiteLLM `/v1/models` per profile key | `profiles\jonbeatz\scripts\profile-health-watchdog.py` |
 | **Alert** | Telegram only on failure; silent = healthy | Hermes cron `56769cb1e0f3` |
 | **Backups** | Before fleet-wide key changes | `D:\Hermes\projects\JonBeatz\.backups\profiles\YYYYMMDD\` |

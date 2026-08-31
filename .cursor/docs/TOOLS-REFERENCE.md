@@ -825,7 +825,7 @@ npm run doctor -- examples/noir/index.html
 
 | Setup | Cursor key | Override URL | Model names |
 |-------|------------|--------------|-------------|
-| **B — LiteLLM** (daily) | `sk-jonbeatz-deepseek-2026` | ngrok `/v1` | `deepseek-v4-pro`, `*-or` aliases |
+| **B — LiteLLM** (daily) | `<MSC_LITELLM_MASTER_KEY>` | ngrok `/v1` | `deepseek-v4-pro`, `*-or` aliases |
 | **C — OR direct** | `sk-or-v1-...` | `openrouter.ai/api/v1/cursor` | OpenRouter slugs (`z-ai/glm-4.5-air`, …) |
 
 **Auto mode:** With Setup B ON, **Auto** uses Cursor subscription (Composer 2.5-ish) — **not** the custom `-or` list. Pick models explicitly for LiteLLM routing.

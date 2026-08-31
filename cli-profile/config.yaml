@@ -3,7 +3,7 @@ model:
   context_length: 1000000
   provider: local-127.0.0.1:4000
   base_url: http://127.0.0.1:4000/v1
-  api_key: sk-jonbeatz-deepseek-2026
+  api_key: {{MSC_LITELLM_MASTER_KEY}}
   aliases:
     v4flash: openrouter/deepseek/deepseek-v4-flash-0731
     v4pro: openrouter/deepseek/deepseek-v4-pro
@@ -13,7 +13,7 @@ providers:
   local-127.0.0.1:4000:
     api: http://127.0.0.1:4000/v1
     name: Local DeepSeek LiteLLM (paid)
-    api_key: sk-jonbeatz-deepseek-2026
+    api_key: {{MSC_LITELLM_MASTER_KEY}}
     discover_models: false
     default_model: deepseek-v4-flash
     models:

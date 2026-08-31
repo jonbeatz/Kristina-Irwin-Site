@@ -55,10 +55,8 @@
 | `npm run mem0:search -- "query"` | Semantic search personal memory |
 | `npm run mem0:list` | List all personal memories |
 | `npm run mem0:seed:profile-jedi` | Re-seed Profile Jedi knowledge (infer=False) |
-| `npm run mnemosyne:remember -- "text"` | Additive local SQLite note (JonBeatz workstation store; prefix project name) |
-| `npm run mnemosyne:recall -- "query"` | Recall from Mnemosyne |
 
-**Requires:** LM Studio local server on **port 1234** (Mem0 search/infer only). Mnemosyne works offline.
+**Requires:** LM Studio local server on **port 1234**.
 
 ---
 
@@ -78,6 +76,7 @@
 | `npm run video:polish:status` | Doctor for polish chain folders + Kinocut |
 | `npm run freecut:open` | FreeCut human polish (freecut.net + workspace folder) |
 | `npm run comfy:start` | Start shared ComfyUI (:8188) with VRAM guards |
+| `npm run comfy:start:qwen` | Unload LMS + `--lowvram` — **2512 Lightning / keep** start. Card: [LOCAL-COMFY-2512-LIGHTNING.md](./LOCAL-COMFY-2512-LIGHTNING.md) |
 | `npm run comfy:stop` | Stop ComfyUI only (keeps LM Studio) |
 | `npm run comfy:restart` | Restart ComfyUI |
 | `npm run comfy:status` | JSON: port, queue, PIDs |
@@ -91,7 +90,7 @@
 | `npm run lmstudio:audit` | LM Studio vault + API health check |
 | `npm run comfy:idle-watcher` | MSC idle watcher daemon (suggest stop after 15m idle) |
 
-**Local dials (Fable 5 · 16 GB):** fast = z-image Q4 · fast keep = z-image BF16 · best = Qwen-Image-2512 · edit = Edit-2511 · Flux = Klein 9B/4B. Unload `qwen3-4b` before heavy Qwen. **ComfyUI only** (LMS cannot load diffusion). Vault: `[[Local-image-model-picker-16GB]]`.
+**Local dials (16 GB):** **default free still = 2512 Lightning** (4-step). z-image Q4 = fast photoreal-ish iterate · 2512 20-step = keep · Edit-2511 = local edit · Flux = Klein 9B/4B. Unload `qwen3-4b` before 2512. **ComfyUI only** (LMS cannot load diffusion). Vault: `[[Local-image-model-picker-16GB]]`.
 
 **Docs:** [IMAGE-WORKFLOW.md](./IMAGE-WORKFLOW.md) · [COMFYUI-MODELS.md](./COMFYUI-MODELS.md) · [VRAM-IMAGE.md](./VRAM-IMAGE.md)
 
@@ -291,28 +290,11 @@ LiteLLM / DeepSeek stack scripts live in `D:\Hermes\projects\_core-scripts\deeps
 
 **Ngrok (Cursor Agent):** Run `npm run deepseek:ngrok` (LiteLLM + ngrok from the `_core-scripts/deepseek-api` stack) — use the HTTPS URL + `/v1` in Cursor Override. The public URL is written to `_core-scripts/deepseek-api/logs/ngrok-public-url.txt`. Localhost `:4000` fails Agent ("private networks forbidden").
 
-**Cursor (Setup B — JonBeatz hub):** Override ON → ngrok `/v1` + `sk-jonbeatz-deepseek-2026`. Models: `deepseek-v4-pro` / `deepseek-v4-flash` (direct) + OpenRouter `*-or` aliases. Registry: JonBeatz **`CURSOR-MODELS-CHEATSHEET.md`** · `npm run cursor:models`. **Auto** = Cursor subscription, not BYOK list — pick models explicitly.
+**Cursor (Setup B — JonBeatz hub):** Override ON → ngrok `/v1` + `<MSC_LITELLM_MASTER_KEY>`. Models: `deepseek-v4-pro` / `deepseek-v4-flash` (direct) + OpenRouter `*-or` aliases. Registry: JonBeatz **`CURSOR-MODELS-CHEATSHEET.md`** · `npm run cursor:models`. **Auto** = Cursor subscription, not BYOK list — pick models explicitly.
 
 **Verify:** `npm run deepseek:test` · `npm run deepseek:test:openrouter`
 
 **Emergency Vertex rollback:** `npm run gcp:vertex-on` — `litellm_config.vertex.yaml` only; GCP billing risk.
-
----
-
-## SiteGround (this profile)
-
-Production is static SFTP to `public_html`. Full write-up: [SiteGround-Deploy.md](./SiteGround-Deploy.md).
-
-| Command | What it does |
-|---------|--------------|
-| `npm run site:build:static` | Next export → `out/` |
-| `npm run site:preview` | Serve `out/` on **:5066** |
-| `npm run siteground:test` | Read-only SFTP connect |
-| `npm run siteground:deploy:dryrun` | List remote, no upload |
-| `npm run siteground:deploy:clean` | Wipe `public_html` + upload `out/` |
-| `npm run siteground:purge-cache` | SuperCacher PURGE (one-shot PHP; SSH exec is denied) |
-
-After every live upload, run **purge-cache**. Bare URL can keep the old HTML until then.
 
 ---
 
@@ -329,7 +311,7 @@ After every live upload, run **purge-cache**. Bare URL can keep the old HTML unt
 | `npm run backup:project` | Interactive backup (Standard or Full, robocopy) |
 | `npm run backup:standard` | Standard backup — skips node_modules, .next, output, logs |
 | `npm run backup:full` | Full mirror — includes everything |
-| `npm run backup:quick` | Standard quick — auto `kristina-irwin-site-project-v{N}-{a-z}`, no prompts |
+| `npm run backup:quick` | Standard quick — auto `jonbeatz-project-v{N}-{a-z}`, no prompts |
 | `npm run backup:quick:full` | Full quick — auto folder name, no prompts |
 | `npm run backup:hermes-profile` | Hermes runtime only → `hermes-profile-latest/` (config.yaml, .env, memories) |
 | `npm run backup:profile` | Alias for `backup:quick` (legacy phrase) |
