@@ -5,6 +5,13 @@ export const SITE = {
   election: "November 3, 2026",
   email: "kristina@kristinairwin.com",
   url: "https://kristinairwin.com",
+  checkPayee: "Kristina Irwin for LACC Trustee 2026",
+  checkMail: {
+    street: "20121 Ventura Blvd., Suite 307",
+    cityLine: "Woodland Hills, CA 91364",
+  },
+  formHref: "/media/Kristina-Irwin-contribution-form.docx",
+  formFileName: "Kristina-Irwin-contribution-form.docx",
   /** Blue link in Google. Keep under ~60 characters. */
   title: "Kristina Irwin | LACCD Board of Trustees, Seat 2",
   /**

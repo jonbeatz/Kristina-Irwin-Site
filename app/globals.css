@@ -115,7 +115,7 @@ a { color: inherit; text-decoration: none; }
   font-family: var(--font-ui);
   font-weight: 800;
   letter-spacing: 0.14em;
-  font-size: 0.92rem;
+  font-size: 1.05rem;
   white-space: nowrap;
 }
 .ki-wordmark span:first-child { color: var(--ki-red); }
@@ -521,7 +521,7 @@ a { color: inherit; text-decoration: none; }
   height: auto;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  object-position: 50% 18%;
+  object-position: left 18%;
   box-shadow: 0 22px 50px rgba(26, 43, 72, 0.16);
   border: 10px solid var(--ki-white);
 }
@@ -556,10 +556,10 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Involve ---------- */
 .ki-involve {
   background:
-    radial-gradient(ellipse at 50% 28%, var(--ki-navy-3) 0%, var(--ki-navy-2) 72%);
+    radial-gradient(ellipse at 50% 28%, var(--ki-navy-3) 0%, var(--ki-navy) 72%);
   color: white;
   text-align: center;
-  padding: 136px 24px 120px;
+  padding: 136px 24px 96px;
   display: flex;
   justify-content: center;
 }
@@ -584,13 +584,20 @@ a { color: inherit; text-decoration: none; }
 }
 .ki-involve-lede {
   margin: 0 0 48px;
-  max-width: none;
-  width: 100%;
+  width: max-content;
+  max-width: 100%;
   color: rgba(255, 255, 255, 0.9);
   font-size: clamp(0.84rem, 1.15vw + 0.55rem, 1.08rem);
   line-height: 1.7;
   white-space: nowrap;
   text-align: center;
+}
+.ki-involve-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: max-content;
+  max-width: 100%;
 }
 .ki-involve-actions {
   display: flex;
@@ -602,6 +609,48 @@ a { color: inherit; text-decoration: none; }
 .ki-involve .ki-btn {
   padding: 16px 32px;
   min-width: 220px;
+}
+.ki-check {
+  width: 100%;
+  max-width: none;
+  margin: 0 0 24px;
+  padding: 36px 40px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: #15263d;
+  text-align: center;
+}
+.ki-check h3 {
+  margin: 0 0 26px;
+  font-family: var(--font-display);
+  font-size: clamp(2.35rem, 4.2vw, 3.35rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0;
+  color: var(--ki-script);
+}
+.ki-check-download {
+  margin: 0 0 40px;
+}
+.ki-check-label {
+  margin: 0 0 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ki-script);
+}
+.ki-check-payee,
+.ki-check-mail {
+  margin: 0;
+  font-family: var(--font-ui);
+  font-style: normal;
+  font-size: 1.08rem;
+  font-weight: 400;
+  line-height: 1.55;
+  color: white;
+}
+.ki-check-payee {
+  margin: 0 0 24px;
 }
 .ki-note {
   margin: 0;
@@ -617,13 +666,14 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------- Footer ---------- */
 .ki-foot {
-  background: var(--ki-navy-2);
+  background: #15263d;
   color: white;
   text-align: center;
   padding: 88px 24px 64px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 .ki-foot-name {
   font-weight: 800;
@@ -753,7 +803,7 @@ a { color: inherit; text-decoration: none; }
     justify-content: center;
     min-height: 52px;
   }
-  .ki-wordmark { font-size: 0.82rem; letter-spacing: 0.1em; }
+  .ki-wordmark { font-size: 0.92rem; letter-spacing: 0.1em; }
   .ki-nav-mark { height: 40px; }
   .ki-brand { gap: 10px; }
   .ki-hero,
@@ -831,8 +881,12 @@ a { color: inherit; text-decoration: none; }
   }
   .ki-involve-lede {
     white-space: normal;
+    width: 100%;
     padding: 0;
     font-size: 1.02rem;
+  }
+  .ki-involve-stack {
+    width: 100%;
   }
   .ki-involve-actions {
     width: 100%;
@@ -845,6 +899,13 @@ a { color: inherit; text-decoration: none; }
     min-width: 0;
     min-height: 48px;
   }
+  .ki-check {
+    padding: 28px 20px 24px;
+  }
+  .ki-check-download {
+    width: 100%;
+    max-width: 340px;
+  }
   .ki-foot {
     padding: 64px max(20px, var(--ki-safe-right)) calc(48px + var(--ki-safe-bottom)) max(20px, var(--ki-safe-left));
   }
@@ -852,7 +913,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (max-width: 480px) {
-  .ki-wordmark { font-size: 0.76rem; letter-spacing: 0.08em; }
+  .ki-wordmark { font-size: 0.84rem; letter-spacing: 0.08em; }
   .ki-nav-mark { height: 34px; }
   .ki-hero-caption { letter-spacing: 0.04em; font-size: 0.64rem; }
   .ki-btn-stack { min-width: 0; width: 100%; max-width: 220px; }

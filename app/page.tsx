@@ -138,18 +138,18 @@ export default function Home() {
             <div className="ki-photos">
               <Image
                 className="ki-photo-main"
-                src="/images/kristina-work.png"
-                alt="Kristina Irwin in a red blazer smiling while looking at a laptop"
-                width={1178}
-                height={1335}
-                sizes="(max-width: 900px) 88vw, 40vw"
-              />
-              <Image
-                className="ki-photo-inset"
                 src="/images/kristina-phone.png"
                 alt="Kristina Irwin on a phone call while writing on a legal pad"
                 width={1254}
                 height={1254}
+                sizes="(max-width: 900px) 88vw, 40vw"
+              />
+              <Image
+                className="ki-photo-inset"
+                src="/images/kristina-work.png"
+                alt="Kristina Irwin in a red blazer smiling while looking at a laptop"
+                width={1178}
+                height={1335}
                 sizes="(max-width: 900px) 50vw, 22vw"
               />
             </div>
@@ -182,6 +182,7 @@ export default function Home() {
           <div className="ki-involve-inner">
             <p className="ki-label ki-label-soft">Move forward—together</p>
             <h2>Help build a stronger future for Los&nbsp;Angeles&nbsp;students.</h2>
+            <div className="ki-involve-stack">
             <p className="ki-involve-lede">
               Join Kristina&apos;s campaign for opportunity, excellence, accountability, and
               common&nbsp;sense.
@@ -194,9 +195,28 @@ export default function Home() {
                 Endorse Kristina
               </a>
             </div>
+            <aside className="ki-check" aria-labelledby="ki-check-heading">
+              <h3 id="ki-check-heading">Donate by Check</h3>
+              <p className="ki-check-label">Make checks payable to:</p>
+              <p className="ki-check-payee">{SITE.checkPayee}</p>
+              <p className="ki-check-label">Mail to:</p>
+              <address className="ki-check-mail">
+                {SITE.checkMail.street}
+                <br />
+                {SITE.checkMail.cityLine}
+              </address>
+            </aside>
+            <a
+              className="ki-btn ki-btn-ghost ki-check-download"
+              href={SITE.formHref}
+              download={SITE.formFileName}
+            >
+              Download Form
+            </a>
             <p className="ki-note">
               <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
             </p>
+            </div>
           </div>
         </section>
       </main>
