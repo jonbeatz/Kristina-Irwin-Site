@@ -1,11 +1,16 @@
 // Flush SiteGround SuperCacher (Dynamic Cache) after a static SFTP upload.
 //
-// This account is SFTP-only: SSH connects but `exec` is denied, so Site Tools
-// UI is not required. We drop a one-shot PHP file that issues nginx PURGE to
-// 127.0.0.1 with the site Host header, hit it over HTTPS, then delete it.
+// STATUS 2026-09-03: BROKEN on kristinairwin.com shared box — loopback PURGE
+// to 127.0.0.1 no longer connects; external PURGE returns 403. Use Site Tools
+// → Speed → Caching → Dynamic Cache → Flush Cache until this is fixed.
+//
+// Historical approach (worked 2026-08-21): SFTP-only account cannot SSH exec,
+// so we drop a one-shot PHP that PURGEs 127.0.0.1 with the site Host header,
+// hit it over HTTPS, then delete it.
 //
 //   npm run siteground:purge-cache
 //
+
 import SftpClient from "ssh2-sftp-client";
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";

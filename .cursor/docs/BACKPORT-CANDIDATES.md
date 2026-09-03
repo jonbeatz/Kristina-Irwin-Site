@@ -16,6 +16,8 @@ When you discover something during a session that could benefit future projects,
 
 | # | What | Type | Project | Date | Status |
 |---|------|------|---------|------|--------|
+| 9 | SiteGround SuperCacher: one-shot PHP PURGE to `127.0.0.1` (`siteground-purge-cache.mjs` pattern) stopped working on KI shared box 2026-09-03 (loopback dead / external PURGE 403). Document Site Tools Dynamic Cache Flush as primary; fix or replace automated purge for other SiteGround static sites. | scripts/docs | Kristina-Irwin-Site | 2026-09-03 | pending |
+| 8 | Picture-book type inventory: Photoshop EngineData `StyleRunAlignment` 2 is roman baseline not center — use `ParagraphRun.Justification`; unescape `\'` in `clean_text`; InDesign `fitOverflow` must grow height only (facing `parentPage.bounds` is spread width). Lives in HBA `scripts/lib/type_inventory_common.py` + `apply_type_inventory_to_indd.py` — backport into shared book-type scripts when those land in the skeleton. | scripts/docs | Harlows-Big-Adventure | 2026-08-22 | pending |
 | 3 | Experience Engine layout doc: monolith pages may need inline-style lock when Tailwind v4 layout refactors fail repeatedly; pair with project-local layout skill | docs/skill | DigitalStudioz | 2026-07-03 | pending |
 
 ## Completed

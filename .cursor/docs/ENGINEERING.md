@@ -20,9 +20,10 @@ All Hermes profiles share this ComfyUI install. Models live on `H:\LLM_VAULT` / 
 
 | Goal | Workflow | Smoke (1024²) |
 |------|----------|---------------|
-| Fast local default | `txt2img-z-image-turbo.json` / `gen-image-local` | ~49s PASS (8 steps) |
+| **Free local still (default)** | `txt2img-qwen-image-2512-lightning.json` / Lightning App Mode | **~22–40s warm** · 4 steps / cfg 1 |
+| Fast z-image iterate | `txt2img-z-image-turbo.json` / `gen-image-local` | ~49s PASS (8 steps) |
 | Fast lane **final quality** | `txt2img-z-image-turbo-bf16.json` | ~155s cold PASS |
-| **Best realism / text** | `txt2img-qwen-image-2512.json` | ~265s PASS |
+| **Best 2512 keep** | `txt2img-qwen-image-2512.json` | ~265s PASS · 20 steps |
 | **Local instruction edit** | `edit-image-qwen-2511.json` | PASS (unload qwen3-4b first — see VRAM rule) |
 | Flux.2 Klein **9B** (NC) | `txt2img-flux-klein-9b.json` | ~98s PASS |
 | Flux.2 Klein 4B (Apache) | `txt2img-flux-klein.json` | fast |
@@ -32,6 +33,7 @@ All Hermes profiles share this ComfyUI install. Models live on `H:\LLM_VAULT` / 
 **VRAM rule (16 GB):** before Qwen-Image-2512 / Edit-2511 renders, `lms unload qwen3-4b-instruct-2507` (else ~199 s/step thrash); restore after with `npm run mem0:preflight`. Klein + z-image are fine with it resident.
 
 ```powershell
+npm run comfy:start:qwen        # unload LMS + --lowvram — default 2512 Lightning start
 npm run comfy:start -- -UnloadLMStudio -LowVram
 npm run comfy:repair-symlinks   # hardlink recreate + verify
 npm run comfy:hardlink-check    # Fable 5 vault<->Comfy health only

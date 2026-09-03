@@ -5,7 +5,7 @@ Production host for **https://kristinairwin.com**. Static Next export (`out/`) u
 > Secrets live only in **`.env.local`** (gitignored) and  
 > `D:\Hermes\projects\_core-scripts\siteground-access\SiteGround_SFTP.md`.
 
-**Live (2026-08-22):** LACCD Board Seat 2 one-pager on `public_html` (v2 photos, email, favicon, OG card, search meta). Google SERP still Senate until recrawl. Placeholders (committee / FPPC / donate) are still on the page.
+**Live (2026-09-03):** LACCD Board Seat 2 one-pager with Involve polish (Donate by Check, Download Form, About photo swap, footer band). Committee / FPPC placeholders still on the page. Google SERP may still show Senate until recrawl.
 
 ## Full ship process (repeat this)
 
@@ -16,8 +16,8 @@ Local is Next.js. SiteGround is **files only** — shared hosting does not run N
 3. `npm run site:preview` — check **http://localhost:5066/** (this is what will go live).
 4. `npm run siteground:deploy:dryrun` — lists remote, no changes.
 5. `npm run siteground:deploy:clean` — **wipes** `public_html` then uploads `out/`. Needed so old Senate `.html` / `_next` files do not remain. Do **not** `--clean` any other domain on this SFTP account.
-6. `npm run siteground:purge-cache` — flush SuperCacher (see below). Bare `https://kristinairwin.com/` can keep serving the **old** HTML until this runs.
-7. Verify in a private window. Do not change DNS MX (`smtp.google.com`).
+6. **Flush SuperCacher** — bare `https://kristinairwin.com/` can keep serving **stale HTML** (or unstyled HTML if `--clean` removed old CSS hashes). See below.
+7. Verify in a private window (or hard refresh). Do not change DNS MX (`smtp.google.com`).
 
 ```powershell
 cd D:\Hermes\projects\Kristina-Irwin-Site
@@ -26,7 +26,8 @@ npm run site:build:static
 npm run site:preview
 npm run siteground:deploy:dryrun
 npm run siteground:deploy:clean
-npm run siteground:purge-cache
+# Then flush Dynamic Cache in Site Tools (primary as of 2026-09-03)
+# Optional: npm run siteground:purge-cache  — currently fails on this box
 ```
 
 Optional staging subfolder (no `--clean` on web root):
@@ -35,19 +36,19 @@ Optional staging subfolder (no `--clean` on web root):
 node scripts/siteground-deploy.mjs --remote /kristinairwin.com/kristinairwin.com/public_html/preview --confirm
 ```
 
-## SuperCacher flush (2026-08-21 — what actually worked)
+## SuperCacher flush
 
-After upload, nginx Dynamic Cache kept the Senate homepage on the bare URL even though SFTP `index.html` was already the new page. Cache-bust `?nocache=` showed the new title.
+After upload, nginx Dynamic Cache can keep the **previous** homepage on the bare URL even though SFTP `index.html` is already new. A query-string cache-bust (`?v=ship`, `?nocache=1`) shows the new page while bare `/` stays stale — **same files**, different cache key. That is not a second site.
 
-| Approach | Result |
-|----------|--------|
-| Site Tools → Speed → Caching → Flush | Official UI. Works. Not required if the script below works. |
+| Approach | Result (as of 2026-09-03) |
+|----------|---------------------------|
+| **Site Tools → Speed → Caching → Dynamic Cache → Flush Cache** | **Primary. Works.** Confirmed after Involve polish ship. |
 | SSH `exec` of `curl -X PURGE http://127.0.0.1/* -H "Host: kristinairwin.com"` | **Denied.** This account is SFTP-only (`Unable to exec`). |
-| One-shot PHP in `public_html` that PURGEs `127.0.0.1` with Host `kristinairwin.com` and `www.kristinairwin.com`, then **delete the PHP file** | **Worked.** Response title `Successful purge`. Script: `npm run siteground:purge-cache`. |
+| One-shot PHP in `public_html` that PURGEs `127.0.0.1` (`npm run siteground:purge-cache`) | **Broken on this box (2026-09-03):** loopback PURGE no longer connects; external PURGE → **403**. Do not rely on it until the script is fixed. |
 
-The helper PHP uses a random name (`ki-purge-<hex>.php`) and is deleted in a `finally` block. Do not leave purge scripts on the server.
+If you try the PHP helper and it somehow uploads: it uses a random name (`ki-purge-<hex>.php`) and should delete itself in a `finally` block. Do not leave purge scripts on the server.
 
-Fallback if the script fails: Site Tools → Speed → Caching → Dynamic Cache → Flush for this site.
+**Verify after flush:** curl/browser with a normal UA to `https://kristinairwin.com/` (not only `?v=ship`). Expect Donate by Check + current `_next/static/css/*.css` hashes. PowerShell `Invoke-WebRequest` without a browser User-Agent may get SiteGround **403** — use `curl.exe -A Mozilla/...` or a real browser.
 
 ## Env keys (must be SET in `.env.local`)
 
@@ -69,5 +70,5 @@ See `.cursor/docs/archive-reference/`. Nameservers are SiteGround; Google Worksp
 | | Archive | This project |
 |--|---------|--------------|
 | Path | `_archive\Kristina-Irwin` | `Kristina-Irwin-Site` |
-| Scope | Multi-page Senate campaign | **LACCD Seat 2 one-pager** (live 2026-08-21) |
+| Scope | Multi-page Senate campaign | **LACCD Seat 2 one-pager** (live 2026-08-21; Involve polish 2026-09-03) |
 | Deploy | Same SiteGround account / domain | Same SFTP `public_html` |

@@ -14,11 +14,12 @@ This is the **fleet agent source of truth** for Hugging Face cloud generation + 
 
 | Goal | Pipeline | VRAM | Speed | Cost |
 |------|----------|------|-------|------|
-| Quick photorealistic still (1024²) | **Hugging Face** `image:gen` / FLUX.1-schnell | **0** (cloud) | ~10–15 s | Free/cheap (HF token) |
-| Paid bonus still / premium models | **fal.ai** `image:fal` | **0** (cloud) | ~5–30 s | Pay-per-use (~$0.003+ / image) |
-| Local GPU txt2img, edit, inpaint, upscale, video | **ComfyUI** @ `:8188` | Uses GPU | 30 s – 5 min | $0 API |
+| **Free local painted still (any project)** | **ComfyUI 2512 Lightning** | GPU · unload LMS | **~22–40s warm** (cold first ~2–4 min) | $0 |
+| Quick photoreal still while LMS stays loaded | **Hugging Face** `image:gen` / FLUX.1-schnell | **0** (cloud) | ~10–15 s | Free/cheap (HF token) |
+| Paid bonus / book identity + finals | **fal.ai** `image:fal` · HY-WU · Banana Pro | **0** (cloud) | ~5–30 s+ | Pay-per-use |
+| Local edit, inpaint, upscale, video | **ComfyUI** @ `:8188` | GPU | 30 s – 5 min | $0 API |
 
-**Rule:** Prefer **HF cloud** when LM Studio is loaded or VRAM is tight. Use **fal** for premium models (Nano Banana 2, GPT Image 2) or when HF is capped. Use **ComfyUI** when Jon asks for local GPU, img2img, inpaint, upscale, or video.
+**Rule:** For **free local images** on this box, use **Qwen-Image-2512 Lightning** (Comfy App Mode). LM Studio does **not** load 2512 — unload `qwen3-4b` first. Full card: [LOCAL-COMFY-2512-LIGHTNING.md](./LOCAL-COMFY-2512-LIGHTNING.md). Use **HF** only when you must keep Mem0 loaded. Use **fal** for premium / book identity+finals.
 
 ---
 
@@ -54,6 +55,7 @@ Required in **`.env.local`:**
 | **Paid bonus** + open | `npm run image:fal:open -- "prompt"` | fal.ai + viewer |
 | **Kling scroll clip** (start + end stills) | `npm run video:fal -- -StartImage a.png -EndImage b.png` | fal.ai queue |
 | Start ComfyUI | `npm run comfy:start` | Local GPU :8188 |
+| **2512 Lightning (free local still)** | `npm run comfy:start:qwen` then App Mode `qwen-image-2512-Lightning-AppMode` | Unload LMS + `--lowvram` · see [LOCAL-COMFY-2512-LIGHTNING.md](./LOCAL-COMFY-2512-LIGHTNING.md) |
 | Stop ComfyUI (keep LM Studio) | `npm run comfy:stop` | Local |
 | ComfyUI status JSON | `npm run comfy:status` | Local |
 | Repair model hardlinks (post H: migration) | `npm run comfy:repair-symlinks` | Local |
@@ -213,18 +215,18 @@ http://127.0.0.1:8188 — drag workflow PNGs to load graphs; debug node executio
 **Day-to-day local gens:** use official **ComfyUI App Mode** (no node graph). Requires ComfyUI frontend ≥1.41.13 (this stack: **0.31.0** / frontend **1.48.7**).
 
 ```powershell
-npm run comfy:start
-# heavy Qwen: npm run comfy:start -- -UnloadLMStudio -LowVram
-# → open http://127.0.0.1:8188 → Workflows → Hermes-Fable5 → *-AppMode.json
-# → stay in App mode → edit controls → Run → npm run comfy:stop
+npm run comfy:start:qwen
+# or: npm run comfy:start -- -UnloadLMStudio -LowVram
+# → open http://127.0.0.1:8188 → Workflows → Hermes-Fable5 → qwen-image-2512-Lightning-AppMode.json
+# → stay in App mode → edit controls → Run → keep warm → npm run comfy:stop → mem0:preflight
 ```
 
 | Dial | App Mode workflow (user library) | Controls |
 |------|----------------------------------|----------|
-| **Fast Q4** | `z-image-turbo-Q4-AppMode.json` | Prompt · Negative · W/H · Seed · Steps |
+| **Default free still (Lightning)** | `qwen-image-2512-Lightning-AppMode.json` | Prompt · Negative · W/H · Seed · Steps — **4-step, not keep** |
+| **Best 2512 keep** | `qwen-image-2512-AppMode.json` | same — quality T2I (20-step) |
+| **Fast photoreal iterate (Q4)** | `z-image-turbo-Q4-AppMode.json` | same |
 | **Keep BF16** | `z-image-turbo-BF16-AppMode.json` | same |
-| **Best 2512** | `qwen-image-2512-AppMode.json` | same — quality T2I |
-| **2512 Lightning (draft)** | `qwen-image-2512-Lightning-AppMode.json` | same — **4-step, not keep** |
 | **Flux Klein 4B** | `flux-klein-4B-AppMode.json` | same |
 | **Flux Klein 9B** | `flux-klein-9B-AppMode.json` | same |
 | **Edit 2511 (1 image)** | `edit-qwen-2511-AppMode.json` | **Image** · Prompt · Negative · Seed · Steps · Denoise |
@@ -243,7 +245,8 @@ Use **Graph mode** only when building/debugging nodes. API workflows under `H:\A
 
 | Goal | Workflow | Notes |
 |------|----------|-------|
-| **Fast dial (default)** | `txt2img-gen-image-local.json` / `txt2img-z-image-turbo.json` | z-image-turbo Q4 + Qwen3-4B CLIP + `ae.safetensors` — ~50s @ 1024, 8 steps |
+| **Free local still (default)** | `txt2img-qwen-image-2512-lightning.json` | Lightning 4-step / cfg 1 — card [LOCAL-COMFY-2512-LIGHTNING.md](./LOCAL-COMFY-2512-LIGHTNING.md) |
+| **Fast photoreal iterate** | `txt2img-gen-image-local.json` / `txt2img-z-image-turbo.json` | z-image-turbo Q4 + Qwen3-4B CLIP + `ae.safetensors` — ~50s @ 1024, 8 steps |
 | **Fast lane, final quality** | `txt2img-z-image-turbo-bf16.json` | z-image-turbo **BF16** (11.5 GB safetensors) — ~155s cold @ 1024. Q4 = iterate, BF16 = final |
 | **Best quality / realism** | `txt2img-qwen-image-2512.json` | Qwen-Image-2512 Q4_K_M + Qwen2.5-VL-7B TE + `qwen_image_vae` — ~4 min @ 1024 / 20 steps |
 | **Local instruction edit** | `edit-image-qwen-2511.json` | **Qwen-Image-Edit-2511** Q4_K_M (local nano-banana-style edits) + Qwen2.5-VL TE — set `OVERRIDE_INPUT_IMAGE.png` + prompt; 20 steps / cfg 2.5 |

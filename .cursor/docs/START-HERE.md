@@ -5,7 +5,7 @@ If an agent is new to this profile, read this file first.
 **Profile root:** D:\\Hermes\\projects\\Kristina-Irwin-Site
 **Hermes slug:** kristina-irwin-site
 
-**Now (2026-09-03):** Active `Kristina-Irwin-Site-Project-v3` (3.0.0). Frozen v2 @ `f1fac14`. Local has Involve donate/form polish; live https://kristinairwin.com awaits redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
+**Now (2026-09-03):** Active `Kristina-Irwin-Site-Project-v3` (3.0.0). Frozen v2 @ `f1fac14`. Live https://kristinairwin.com has Involve polish. Redeploy: `site:build:static` → `siteground:deploy:clean` → **Site Tools Dynamic Cache Flush** (scripted `siteground:purge-cache` broken as of 2026-09-03 — see SiteGround-Deploy.md).
 
 **Local images (this PC, $0):** `npm run comfy:start:qwen` then App Mode **Lightning**. Card: [LOCAL-COMFY-2512-LIGHTNING.md](./LOCAL-COMFY-2512-LIGHTNING.md).
 

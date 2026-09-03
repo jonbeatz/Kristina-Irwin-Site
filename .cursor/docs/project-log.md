@@ -2,7 +2,8 @@
 
 | Date | Session | Key outcomes |
 |------|---------|-------------|
-| 2026-09-03 | Involve polish + branch cut v3 | Donate by Check, form download, About photo swap, footer `#15263D`, larger nav wordmark. Commit `f1fac14` on v2 then cut `Kristina-Irwin-Site-Project-v3` @ **3.0.0**. Backup `v1-d`. Live redeploy still pending. |
+| 2026-09-03 | Live Involve polish + cache flush | `site:build:static` → `siteground:deploy:clean` (**UPLOAD_OK**). Form live at `/media/Kristina-Irwin-contribution-form.docx`. Automated `siteground:purge-cache` failed (loopback PURGE dead / external 403). Site Tools → Speed → Caching → Dynamic Cache → Flush fixed bare https://kristinairwin.com/. `?v=ship` explained as cache-bust only. Docs/mem0/vault/mnemosyne harvest. |
+| 2026-09-03 | Involve polish + branch cut v3 | Donate by Check, form download, About photo swap, footer `#15263D`, larger nav wordmark. Commit `f1fac14` on v2 then cut `Kristina-Irwin-Site-Project-v3` @ **3.0.0**. Backup `v1-d`. |
 | 2026-08-31 | Open Project + Academy harvest | Opened KI; helped Yolando SiteGround/Codex. Teaching SoT moved to `D:\Hermes\projects\AI-Setup-Academy` (click-paths, env-skeletons, gitignored env-live). |
 | 2026-08-22 | SEO + morning nits | Meta description/canonical/JSON-LD/robots/sitemap live. Involve “Los Angeles students” nowrap (`aff1af5`). Client contact **Yolando**. Google still caches Senate D24. |
 | 2026-08-22 | End Project | v2 nits live + docs/mem0/vault + git `330a9f6` pushed. Quick backup `v1-c`. Next: committee / FPPC / donate vs volunteer from Kristina. |

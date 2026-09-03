@@ -34,7 +34,7 @@ This repo is a **one-page** rebuild from `.cursor/assets/KI-MockUps/`. The old m
 
 Kristina Irwin — Los Angeles Community College District Board of Trustees, **Seat 2** (election **November 3, 2026**). Committee name, FPPC ID, and donation/endorse URLs: confirm with client before shipping (placeholders on the page).
 
-**Build status (2026-09-03):** Active line is `Kristina-Irwin-Site-Project-v3` (3.0.0). Local one-pager now has mail-in donate box, contribution form download, About photo swap, footer band. Live https://kristinairwin.com still on prior SiteGround ship until next `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`. Committee / FPPC placeholders remain.
+**Build status (2026-09-03):** Active line is `Kristina-Irwin-Site-Project-v3` (3.0.0). Live https://kristinairwin.com has Involve polish (Donate by Check, form download, About photo swap, footer band) after `site:build:static` → `siteground:deploy:clean` + Site Tools Dynamic Cache flush. `npm run siteground:purge-cache` currently fails — use Site Tools until fixed. Committee / FPPC placeholders remain.
 
 **How it runs:** Local = Next.js + Node (`web:dev`). SiteGround = static export only (`KI_STATIC=1` → `out/` → SFTP). Shared SiteGround does not host Node.js.
 
