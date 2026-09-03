@@ -50,10 +50,10 @@ export default function Home() {
             <div className="ki-hero-frame">
               <Image
                 src="/images/kristina-hero.png"
-                alt="Kristina Irwin, smiling in a black blazer"
+                alt="Kristina Irwin, smiling in a tweed blazer"
                 fill
                 sizes="(max-width: 900px) 100vw, 50vw"
-                style={{ objectFit: "cover", objectPosition: "center 22%" }}
+                style={{ objectFit: "cover", objectPosition: "center 28%" }}
                 priority
               />
             </div>

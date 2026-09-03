@@ -4,6 +4,7 @@
 
 - Still waiting on Kristina: official committee name, FPPC ID; optional shorter official Google bio.
 - Fix or retire `scripts/siteground-purge-cache.mjs` (loopback PHP PURGE dead on this box as of 2026-09-03).
+- **2026-09-03 hero:** live photo is `KI-New-HomeBg2.png` → `public/images/kristina-hero.png` (`object-position: center 28%`). SiteGround `--clean` + Site Tools Dynamic Cache Flush.
 
 ## v3.0.0 — 2026-09-03
 

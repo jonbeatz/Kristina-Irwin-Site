@@ -28,8 +28,8 @@ Living notes for the LACCD Seat 2 campaign page. **TRUTH.md** still wins if this
 ## Hero
 
 - Logo: `ki-logo-b.png`
-- Photo: `kristina-hero.png` (from `.cursor/assets/KI-Photos/image1b.png`)
-- `object-fit: cover`, `object-position: center 22%`, frame **no margin**
+- Photo: `kristina-hero.png` (from `.cursor/assets/KI-Photos/KI-New-HomeBg2.png`)
+- Crop: `object-fit: cover`, `object-position: center 28%`, frame **no margin**
 - “Community” peach script; “Colleges.” peach serif
 
 ## About photos

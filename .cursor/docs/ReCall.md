@@ -2,13 +2,12 @@
 
 ## Current Focus
 
-- [2026-09-03] **LIVE** https://kristinairwin.com matches Involve polish (Donate by Check, Download Form, About photo swap, footer `#15263D`, larger nav wordmark). Branch `Kristina-Irwin-Site-Project-v3` (3.0.0). Frozen v2 @ `f1fac14`.
-- [2026-09-03] Deploy path that shipped: `web:dev:stop` → `site:build:static` → `siteground:deploy:clean` (**UPLOAD_OK**) → SuperCacher **Dynamic Cache Flush** in Site Tools (scripted PHP PURGE currently fails — see SiteGround-Deploy.md).
-- [2026-09-03] `?v=ship` was only a cache-bust verify URL — same files on disk as bare `/`. Drop it once bare URL is fresh.
-- [2026-08-31] Teaching for SiteGround/Hostinger lives in **AI Setup Academy** (`D:\Hermes\projects\AI-Setup-Academy`). This repo stays the KI one-pager.
+- [2026-09-03] **LIVE** https://kristinairwin.com — hero photo swapped to `KI-New-HomeBg2.png` (`object-position: center 28%`). Involve polish still live. Branch `Kristina-Irwin-Site-Project-v3` (3.0.0). Frozen v2 @ `f1fac14`. Backup `kristina-irwin-site-project-v1-e`.
+- Redeploy: `site:build:static` → `siteground:deploy:clean` → **Site Tools Dynamic Cache Flush** (`siteground:purge-cache` broken).
 - Client contact spelling: **Yolando** (not Yolanda) + Kristina.
-- **Next:** official committee / FPPC when Kristina sends; Google recrawl / Search Console when access exists. SSL Let’s Encrypt expires **2026-09-23**.
+- **Next:** official committee / FPPC when Kristina sends; SSL before **2026-09-23**; Google recrawl when access exists; optional purge-script fix.
 - Local: `web:dev` **:3000**. Never `web:build` while `:3000` is up.
+- Left untracked on purpose: `CREDENTIALS-MANIFEST.md`, `CampaignMark.tsx`, `__pycache__/`. Extra KI photo candidates in `.cursor/assets/KI-Photos/` (`Front_K_Irwin`, `KI-New-HomeBg1`, UUID PNG) not yet used.
 
 ## One-pager (what shipped)
 
@@ -19,7 +18,7 @@ Single page: sticky/full-width nav, hero, vote bar, Why, Priorities, About, Invo
 | Office | LACCD Board of Trustees, **Seat 2**, election **November 3, 2026** |
 | Nav | Text **KRISTINA** (red) **IRWIN** (navy). Graphic Senate/star mark **commented out** in `SiteNav.tsx`. |
 | Hero logo | `public/images/ki-logo-b.png`. ~368px desktop. `mix-blend-mode: lighten`. |
-| Hero photo | `kristina-hero.png` from `image1b.png`. `object-fit: cover`, `object-position: center 22%`, frame **no margin**, panel `--ki-hero-photo-bg: #fefefe`. Navy caption bar kept. |
+| Hero photo | `kristina-hero.png` from `KI-New-HomeBg2.png`. `object-fit: cover`, `object-position: center 28%`, frame **no margin**, panel `--ki-hero-photo-bg: #fefefe`. Navy caption bar kept. |
 | About photos | Main: `kristina-phone.png` (tweed). Inset: `kristina-work.png` (red blazer). Frames stay 3:4 + square. Main `object-position: left 18%`. |
 | Email | `kristina@kristinairwin.com` (`lib/site.ts`). Join / Endorse mailto that. Email under Download Form as `.ki-note`. |
 | Involve | Join + Endorse buttons; Donate by Check box (payee + Ventura mail); Download Form → `/media/Kristina-Irwin-contribution-form.docx`. Box fill `#15263D`; stroke matches footer hairline. |

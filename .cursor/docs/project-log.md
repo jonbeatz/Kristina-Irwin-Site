@@ -2,6 +2,8 @@
 
 | Date | Session | Key outcomes |
 |------|---------|-------------|
+| 2026-09-03 | Hero photo swap live | Replaced `kristina-hero.png` with `KI-New-HomeBg2.png` (crop `center 28%`). `siteground:deploy:clean` + Site Tools Dynamic Cache Flush. Live SHA match. |
+| 2026-09-03 | Close / handoff | Docs+mem0+vault+git `c0c34d6` pushed; backup `v1-e`. Fleet left running. Next: committee/FPPC; SSL before 2026-09-23. |
 | 2026-09-03 | Live Involve polish + cache flush | `site:build:static` → `siteground:deploy:clean` (**UPLOAD_OK**). Form live at `/media/Kristina-Irwin-contribution-form.docx`. Automated `siteground:purge-cache` failed (loopback PURGE dead / external 403). Site Tools → Speed → Caching → Dynamic Cache → Flush fixed bare https://kristinairwin.com/. `?v=ship` explained as cache-bust only. Docs/mem0/vault/mnemosyne harvest. |
 | 2026-09-03 | Involve polish + branch cut v3 | Donate by Check, form download, About photo swap, footer `#15263D`, larger nav wordmark. Commit `f1fac14` on v2 then cut `Kristina-Irwin-Site-Project-v3` @ **3.0.0**. Backup `v1-d`. |
 | 2026-08-31 | Open Project + Academy harvest | Opened KI; helped Yolando SiteGround/Codex. Teaching SoT moved to `D:\Hermes\projects\AI-Setup-Academy` (click-paths, env-skeletons, gitignored env-live). |
