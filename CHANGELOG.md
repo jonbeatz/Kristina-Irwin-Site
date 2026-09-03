@@ -1,10 +1,17 @@
 # Changelog — Kristina-Irwin-Site
 
-## Unreleased — branch `Kristina-Irwin-Site-Project-v2`
+## Unreleased — branch `Kristina-Irwin-Site-Project-v3`
 
-- Still waiting on Kristina: official committee name, FPPC ID, donate vs volunteer for Join, Endorse destination; optional shorter official Google bio.
-- Search meta live: `SITE.description` professional/businesswoman copy; `robots.txt` + `sitemap.xml`; JSON-LD. SERPs still Senate until recrawl.
-- Involve headline: non-breaking spaces keep “Los Angeles students” together (`aff1af5`).
+- Still waiting on Kristina: official committee name, FPPC ID; optional shorter official Google bio.
+- Live SiteGround redeploy pending for mail-in donate / form / About photo swap / footer polish.
+
+## v3.0.0 — 2026-09-03
+
+- Branch cut: freeze `Kristina-Irwin-Site-Project-v2` @ `f1fac14`; active `Kristina-Irwin-Site-Project-v3`.
+- Pre-cut backup `kristina-irwin-site-project-v1-d`.
+- Involve: Donate by Check box (payee + Woodland Hills mail address), Download Form (Word contribution card), matched stroke + footer `#15263D` band.
+- About: swap photos (tweed main / red-blazer inset); nav wordmark slightly larger.
+- Commit on freeze line: `f1fac14` feat(involve) mail-in donate + form download + about polish.
 
 ## v2.0.0 — 2026-08-22
 

@@ -3,7 +3,7 @@
 **Hermes AI profile — self-contained workspace with Mem0, local LLM, and agent ops.**
 
 [![Platform](https://img.shields.io/badge/Platform-Windows_10%2F11-0078D6?logo=windows)](https://github.com/jonbeatz/Kristina-Irwin-Site)
-[![Version](https://img.shields.io/badge/version-2.0.0-blue)](https://github.com/jonbeatz/Kristina-Irwin-Site/releases)
+[![Version](https://img.shields.io/badge/version-3.0.0-blue)](https://github.com/jonbeatz/Kristina-Irwin-Site/releases)
 [![Release](https://img.shields.io/github/v/release/jonbeatz/Kristina-Irwin-Site?label=release&sort=semver)](https://github.com/jonbeatz/Kristina-Irwin-Site/releases)
 [![Repo](https://img.shields.io/badge/GitHub-jonbeatz%2FKristina-Irwin-Site-181717?logo=github)](https://github.com/jonbeatz/Kristina-Irwin-Site)
 [![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
@@ -18,7 +18,7 @@
 
 | Metric | Value |
 | :--- | :--- |
-| **Version** | `v2.0.0` · [Latest release](https://github.com/jonbeatz/Kristina-Irwin-Site/releases/tag/v2.0.0) |
+| **Version** | `v3.0.0` · [Latest release](https://github.com/jonbeatz/Kristina-Irwin-Site/releases/tag/v3.0.0) |
 | **Stack** | Next.js 15 App Router + Tailwind v4 — LACCD Seat 2 one-pager |
 | **Memory** | 🧠 Mem0 + Qdrant — `kristina-irwin-site_memories` collection |
 | **Live Site** | https://kristinairwin.com — LACCD Seat 2 one-pager (placeholders remain) |

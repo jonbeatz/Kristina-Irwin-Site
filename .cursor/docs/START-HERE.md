@@ -5,7 +5,9 @@ If an agent is new to this profile, read this file first.
 **Profile root:** D:\\Hermes\\projects\\Kristina-Irwin-Site
 **Hermes slug:** kristina-irwin-site
 
-**Now (2026-08-22):** Active `Kristina-Irwin-Site-Project-v2` (2.0.0). Frozen v1 @ `1865e60`. **LIVE** https://kristinairwin.com with v2 photos, email, favicon, OG card, and new search meta (`lib/site.ts`). Google still shows old Senate copy until recrawl. Redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
+**Now (2026-09-03):** Active `Kristina-Irwin-Site-Project-v3` (3.0.0). Frozen v2 @ `f1fac14`. Local has Involve donate/form polish; live https://kristinairwin.com awaits redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
+
+**Local images (this PC, $0):** `npm run comfy:start:qwen` then App Mode **Lightning**. Card: [LOCAL-COMFY-2512-LIGHTNING.md](./LOCAL-COMFY-2512-LIGHTNING.md).
 
 ---
 

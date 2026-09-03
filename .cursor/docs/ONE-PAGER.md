@@ -2,9 +2,9 @@
 
 Living notes for the LACCD Seat 2 campaign page. **TRUTH.md** still wins if this drifts.
 
-## Status (2026-08-22)
+## Status (2026-09-03)
 
-**Live** at https://kristinairwin.com (v2 nits shipped). Placeholders remain (donate, committee/FPPC). Email: `kristina@kristinairwin.com`.
+**Active branch** `Kristina-Irwin-Site-Project-v3` @ **3.0.0**. Live https://kristinairwin.com still prior ship until next SiteGround deploy. Local: mail-in donate box, contribution form download, About photo swap. Email: `kristina@kristinairwin.com`. Committee/FPPC placeholders remain.
 
 ## Brand
 
@@ -34,8 +34,8 @@ Living notes for the LACCD Seat 2 campaign page. **TRUTH.md** still wins if this
 
 ## About photos
 
-- Main: `kristina-work.png` ← `image2b.png` (1178×1335)
-- Inset: `kristina-phone.png` ← `image3b.png` (1254×1254)
+- Main: `kristina-phone.png` ← `image3b.png` (tweed / phone) — portrait frame 3:4, `object-position: left 18%`
+- Inset: `kristina-work.png` ← `image2b.png` (red blazer) — square
 
 ## Favicon + share card
 
@@ -49,8 +49,10 @@ Edit **`SITE.title`** and **`SITE.description`** in `lib/site.ts`, then redeploy
 ## Involve / footer
 
 - Join + Endorse mailto `kristina@kristinairwin.com`
-- Email repeated under buttons (`.ki-note`)
-- FPPC disclosure box stays until official copy; **opacity 50%**
+- Donate by Check box (`SITE.checkPayee` / `SITE.checkMail`) width-matched to Involve lede
+- Download Form → `/media/Kristina-Irwin-contribution-form.docx`
+- Email under form (`.ki-note`)
+- Footer full-width `#15263D` + top hairline; FPPC disclosure box stays until official copy; **opacity 50%**
 
 ## Do not
 

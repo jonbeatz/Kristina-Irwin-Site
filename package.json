@@ -1,6 +1,6 @@
 {
   "name": "kristina-irwin-site-profile",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Kristina Irwin one-page website — client SiteGround rebuild (successor to archived Kristina-Irwin).",
   "scripts": {
     "hermes:desktop-ready": "powershell -ExecutionPolicy Bypass -File D:\\Hermes\\projects\\JonBeatz\\scripts\\Start-Hermes-FullControl-Desktop.ps1",
@@ -115,6 +115,7 @@
     "draven:speak": "powershell -File D:\\Hermes\\projects\\_core-scripts\\voice-engine\\scripts\\draven-speak.ps1",
     "env:setup": "powershell -File D:\\Hermes\\projects\\_core-scripts\\shared-profile-content\\scripts\\env-setup.ps1",
     "comfy:start": "powershell -File scripts/comfy-delegate.ps1 -Action start",
+    "comfy:start:qwen": "powershell -File scripts/comfy-delegate.ps1 -Action start -UnloadLMStudio -LowVram -NoVRAMCheck",
     "comfy:stop": "powershell -File scripts/comfy-delegate.ps1 -Action stop",
     "comfy:restart": "powershell -File scripts/comfy-delegate.ps1 -Action restart",
     "comfy:status": "powershell -File scripts/comfy-delegate.ps1 -Action status",

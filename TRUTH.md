@@ -1,9 +1,9 @@
 # TRUTH.md — Kristina-Irwin-Site
 
-**Version:** 2.0.0  
+**Version:** 3.0.0  
 **Profile root:** `D:\Hermes\projects\Kristina-Irwin-Site`  
-**Active branch:** `Kristina-Irwin-Site-Project-v2`  
-**Frozen:** `Kristina-Irwin-Site-Project-v1` @ `1865e60`  
+**Active branch:** `Kristina-Irwin-Site-Project-v3`  
+**Frozen:** `Kristina-Irwin-Site-Project-v2` @ `f1fac14` (prior freeze: `Kristina-Irwin-Site-Project-v1` @ `1865e60`)  
 **Live:** https://kristinairwin.com (SiteGround — client-owned)  
 **GitHub:** https://github.com/jonbeatz/Kristina-Irwin-Site (private)  
 **Archive (live multi-page site):** `archive/live-site-2026-06/` (local only — not git, not backups)  
@@ -34,7 +34,7 @@ This repo is a **one-page** rebuild from `.cursor/assets/KI-MockUps/`. The old m
 
 Kristina Irwin — Los Angeles Community College District Board of Trustees, **Seat 2** (election **November 3, 2026**). Committee name, FPPC ID, and donation/endorse URLs: confirm with client before shipping (placeholders on the page).
 
-**Build status (2026-08-22):** Active line is `Kristina-Irwin-Site-Project-v2` (2.0.0). Live https://kristinairwin.com has v2 photos, email, favicon, OG card, and **new search meta** (see `.cursor/docs/SEO.md`). Google still caches Senate D24 until recrawl. Placeholders remain until Kristina supplies committee / FPPC / donate vs volunteer. Redeploy: `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`.
+**Build status (2026-09-03):** Active line is `Kristina-Irwin-Site-Project-v3` (3.0.0). Local one-pager now has mail-in donate box, contribution form download, About photo swap, footer band. Live https://kristinairwin.com still on prior SiteGround ship until next `site:build:static` → `siteground:deploy:clean` → `siteground:purge-cache`. Committee / FPPC placeholders remain.
 
 **How it runs:** Local = Next.js + Node (`web:dev`). SiteGround = static export only (`KI_STATIC=1` → `out/` → SFTP). Shared SiteGround does not host Node.js.
 
