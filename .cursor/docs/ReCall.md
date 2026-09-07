@@ -8,8 +8,9 @@
 - After `--clean`, bare `/` can look **unstyled** (stale HTML → deleted CSS hashes). Verify with `?v=ship` until flush; then bare URL.
 - Client contact spelling: **Yolando** (not Yolanda) + Kristina.
 - **Next:** official FPPC ID number when Kristina sends (disclosure already names committee line); SSL before **2026-09-23**; Google recrawl when access exists.
-- Local: `web:dev` **:3000**. Never `web:build` while `:3000` is up.
+- Local: `web:dev` **:3000** (stopped on close). Never `web:build` while `:3000` is up.
 - Left untracked on purpose: `CREDENTIALS-MANIFEST.md`, `CampaignMark.tsx`, `__pycache__/`, Maps screenshot.
+- **Fleet:** left running (LiteLLM :4000, ngrok :4040, LM Studio :1234) — use **Open Project** in next workspace.
 
 ## One-pager (what shipped)
 
