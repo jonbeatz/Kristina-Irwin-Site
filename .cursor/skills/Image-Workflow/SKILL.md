@@ -34,6 +34,7 @@ npm run mem0:preflight      # restore qwen3-4b after unload
 
 - **Free local still (any project)** → `comfy:start:qwen` → App Mode **`qwen-image-2512-Lightning-AppMode`** (~22–40s warm)
 - **Keep LMS loaded / photoreal cloud** → HF `image:gen` or fal
+- **Website / v0-like photoreal** → fal `flux-2-pro` (pack) → `flux-2-max` or `nano-banana-pro` (keepers). Not Klein. See IMAGE-WORKFLOW three-tier table (2026-09-05).
 - **Book dials / print finals** → project IMAGE-LANE (Lightning scenery → Fal HY-WU → Banana Pro)
 - **20-step local keep** → `qwen-image-2512-AppMode` · **edit** → Edit-2511 · **z-image** Q4/BF16 · **Flux** Klein
 - **Done with ComfyUI** → `comfy:stop` then `mem0:preflight`

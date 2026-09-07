@@ -2,12 +2,13 @@
 
 ## Current Focus
 
-- [2026-09-03] **LIVE** https://kristinairwin.com — hero photo swapped to `KI-New-HomeBg2.png` (`object-position: center 28%`). Involve polish still live. Branch `Kristina-Irwin-Site-Project-v3` (3.0.0). Frozen v2 @ `f1fac14`. Backup `kristina-irwin-site-project-v1-e`.
+- [2026-09-03 close] **LIVE** https://kristinairwin.com — hero `KI-New-HomeBg2.png` + Involve polish. HEAD `0916d0e` on `Kristina-Irwin-Site-Project-v3` (3.0.0). Frozen v2 @ `f1fac14`. Backup `v1-e`.
+- **Fleet:** left running (LiteLLM :4000, ngrok :4040, LM Studio :1234) — next workspace uses **Open Project**.
 - Redeploy: `site:build:static` → `siteground:deploy:clean` → **Site Tools Dynamic Cache Flush** (`siteground:purge-cache` broken).
 - Client contact spelling: **Yolando** (not Yolanda) + Kristina.
-- **Next:** official committee / FPPC when Kristina sends; SSL before **2026-09-23**; Google recrawl when access exists; optional purge-script fix.
+- **Next open:** official committee / FPPC when Kristina sends; SSL before **2026-09-23**; Google recrawl when access exists; optional purge-script fix.
 - Local: `web:dev` **:3000**. Never `web:build` while `:3000` is up.
-- Left untracked on purpose: `CREDENTIALS-MANIFEST.md`, `CampaignMark.tsx`, `__pycache__/`. Extra KI photo candidates in `.cursor/assets/KI-Photos/` (`Front_K_Irwin`, `KI-New-HomeBg1`, UUID PNG) not yet used.
+- Left untracked on purpose: `CREDENTIALS-MANIFEST.md`, `CampaignMark.tsx`, `__pycache__/`. Extra KI photo candidates (`Front_K_Irwin`, `KI-New-HomeBg1`, UUID PNG) not yet used.
 
 ## One-pager (what shipped)
 
