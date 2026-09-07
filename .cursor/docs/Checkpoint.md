@@ -11,4 +11,4 @@
 | 2026-09-03 | v2 involve polish | `Kristina-Irwin-Site-Project-v2` | `f1fac14` | Mail-in donate box, form download, About photo swap, footer band. |
 | 2026-09-03 | v3 kickoff | `Kristina-Irwin-Site-Project-v3` | `559b76c` | Branch cut @ 3.0.0. Pre-cut backup `kristina-irwin-site-project-v1-d`. |
 | 2026-09-03 | v3 Involve polish + hero live | `Kristina-Irwin-Site-Project-v3` | `dd06fdd` | Frozen restore line. Involve polish + `KI-New-HomeBg2` hero + asset bank. |
-| 2026-09-07 | v4 kickoff | `Kristina-Irwin-Site-Project-v4` | (cut commit) | Branch cut @ 4.0.0. Pre-cut backup `kristina-irwin-site-project-v1-f`. |
+| 2026-09-07 | v4 kickoff | `Kristina-Irwin-Site-Project-v4` | `7184c72` | Branch cut @ 4.0.0. Pre-cut backup `kristina-irwin-site-project-v1-f`. |
