@@ -12,6 +12,7 @@
 - Pre-cut backup `kristina-irwin-site-project-v1-f`.
 - Frozen line includes live Involve polish + hero `KI-New-HomeBg2`, map/photo asset bank, notes under `.cursor/assets/Notes/`.
 - **Live ship (same day):** District Leaflet/OSM map + 9-college list (list↔pin), endorsement ticker (Romero, Antonovich, Hernandez, ICAN). Commit `6157fec`. SiteGround `--clean` + Site Tools Dynamic Cache Flush. Esri dark basemap rejected; college ↑/↓ uses list-only `scrollTo`.
+- **Footer (same day):** paid-for-by disclosure + MSC credit mailto (`7a73ada`, `bdb02fd`); college ↑ full-row step fix.
 
 ## v3.0.0 — 2026-09-03
 

@@ -3,11 +3,11 @@
 ## Current Focus
 
 - [2026-09-07] **Active:** `Kristina-Irwin-Site-Project-v4` (4.0.0). **Frozen:** `Kristina-Irwin-Site-Project-v3` @ `dd06fdd`. Pre-cut backup `kristina-irwin-site-project-v1-f`.
-- **LIVE** https://kristinairwin.com — District map + college list + endorsement ticker shipped (`6157fec`). Hero `KI-New-HomeBg2` + Involve polish remain.
+- **LIVE** https://kristinairwin.com — District map + college list + endorsement ticker; footer paid-for-by + MSC credit. Latest HEAD `bdb02fd`. Hero `KI-New-HomeBg2` + Involve polish remain.
 - Redeploy: `site:build:static` → `siteground:deploy:clean` → **Site Tools Dynamic Cache Flush** (`siteground:purge-cache` still broken — loopback PURGE dead).
 - After `--clean`, bare `/` can look **unstyled** (stale HTML → deleted CSS hashes). Verify with `?v=ship` until flush; then bare URL.
 - Client contact spelling: **Yolando** (not Yolanda) + Kristina.
-- **Next:** official committee / FPPC when Kristina sends; SSL before **2026-09-23**; Google recrawl when access exists.
+- **Next:** official FPPC ID number when Kristina sends (disclosure already names committee line); SSL before **2026-09-23**; Google recrawl when access exists.
 - Local: `web:dev` **:3000**. Never `web:build` while `:3000` is up.
 - Left untracked on purpose: `CREDENTIALS-MANIFEST.md`, `CampaignMark.tsx`, `__pycache__/`, Maps screenshot.
 
@@ -25,7 +25,7 @@ Single page: sticky/full-width nav, hero, vote bar, Why, Priorities, About, Invo
 | Email | `kristina@kristinairwin.com` (`lib/site.ts`). Join / Endorse mailto that. Email under Download Form as `.ki-note`. |
 | Involve | Join + Endorse buttons; Donate by Check box (payee + Ventura mail); Download Form → `/media/Kristina-Irwin-contribution-form.docx`. Box fill `#15263D`; stroke matches footer hairline. |
 | Endorsements | Thin navy band `#15263D` above District (`EndorsementTicker`). Soft top hairline `rgba(255,255,255,0.08)` — not footer `0.4`. Data: `lib/endorsements.ts` (Romero, Antonovich, Hernandez, ICAN). CSS marquee; pause on hover; reduced-motion = static wrap. |
-| District | `#district` — Leaflet + OpenStreetMap (colorful streets; **not** Esri dark gray — Jon preferred color). Nine red pins; list↔map select (`activeId`). College slider scrolls **list only** (`scrollTo` on track — never `scrollIntoView`, which moves the page). Stack under ~1100px; list full width when stacked. Data: `lib/colleges.ts`. |
+| District | `#district` — Leaflet + OpenStreetMap (colorful streets; **not** Esri dark gray — Jon preferred color). Nine red pins; list↔map select (`activeId`). College slider scrolls **list only** (`scrollTo` on track — never `scrollIntoView`). ↑/↓ always steps a **full row** (no tiny mid-row snap). Stack under ~1100px; list full width when stacked. Data: `lib/colleges.ts`. Mobile: OSM tiles can lag briefly (empty blue box) then fill — confirmed OK in Safari/Chrome/Brave/Vivaldi iPhone. |
 | Check payee | `Kristina Irwin for LACC Trustee 2026` |
 | Check mail | `20121 Ventura Blvd., Suite 307` / `Woodland Hills, CA 91364` |
 | Favicon | Cropped **LA + book** in `app/icon.png` / `app/favicon.ico` / `app/apple-icon.png`. Tab slot is fixed; fill the square. **Never** also put `public/favicon.ico` (Next 500 conflict). Source pack: `.cursor/assets/KI-Photos/favicon_io/`. |
@@ -33,7 +33,7 @@ Single page: sticky/full-width nav, hero, vote bar, Why, Priorities, About, Invo
 | Headline | Community = peach **script**; Colleges. = same peach, **serif**. Involve h2: `Los&nbsp;Angeles&nbsp;students`. Donate by Check heading matches Involve h2 size; peach like labels. |
 | SEO | `SITE.title` / `SITE.description` in `lib/site.ts`. Canonical apex. `public/robots.txt` + `public/sitemap.xml` (not `app/robots.ts` — static export rejects those routes). JSON-LD Person + WebSite in `app/layout.tsx`. |
 | Gutter | `--ki-gutter: 52px` |
-| Footer | Full-width `#15263D` + top hairline. Committee/FPPC box at **50% opacity**. |
+| Footer | Full-width `#15263D` + top hairline. Disclosure: `SITE.disclosure` — **Paid For By Kristina Irwin for Los Angeles Community College District- ID# pending** (box **50% opacity**). Below: `© 2026 · Website design and development by My Studio Channel.` (`SITE.credit` → mailto `createmystudiochannel@gmail.com`). |
 
 Assets stay under **`.cursor/assets/`**. Client notes: `.cursor/assets/Notes/KI-notes-v1.md`.
 
@@ -57,17 +57,17 @@ Full steps: `.cursor/docs/SiteGround-Deploy.md`.
 - SuperCacher flush is part of every deploy, not optional — Site Tools Dynamic Cache is primary.
 - Map basemap: keep **OpenStreetMap color** (reject Esri dark gray for this brand).
 - Endorsement ticker soft top stroke (not matching footer heavy hairline).
-- College list ↑/↓ must scroll the list container only (`el.scrollTo`), not `scrollIntoView`.
-- Jon approved live ship **with** FPPC placeholder still on the page.
+- College list ↑/↓ must scroll the list container only (`el.scrollTo`), not `scrollIntoView`; step a full row (no mid-row snap).
+- Jon approved live ship **with** FPPC ID still pending (disclosure names the committee line).
 - Client: **Yolando** + Kristina.
 
 ## Git
 
 - Working branch: `Kristina-Irwin-Site-Project-v4`
-- Latest ship commit: `6157fec` feat(district) map + college list + endorsement ticker
+- Latest HEAD: `bdb02fd` MSC footer credit (after `7a73ada` disclosure + ↑ scroll, `6157fec` district ship)
 - Frozen restore: `Kristina-Irwin-Site-Project-v3` @ `dd06fdd`
 - `archive/` gitignored and skipped by backups.
 
 ---
 
-*Last Entry: 2026-09-07 (district ship live)*
+*Last Entry: 2026-09-07 (End Project — district + footer live)*

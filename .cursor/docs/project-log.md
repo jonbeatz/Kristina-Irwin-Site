@@ -2,6 +2,7 @@
 
 | Date | Session | Key outcomes |
 |------|---------|-------------|
+| 2026-09-07 | End Project | Footer disclosure + MSC credit live (`7a73ada`/`bdb02fd`); college ↑ full-row fix; iPhone browsers OK (Vivaldi tile lag only). Docs/vault/mem0 harvest. HEAD `bdb02fd`. Next: FPPC ID #; SSL before 2026-09-23. |
 | 2026-09-07 | District ship live | Leaflet OSM map + 9 colleges list↔pin, endorsement ticker (Romero/Antonovich/Hernandez/ICAN). Commit `6157fec` pushed v4. `siteground:deploy:clean` ×2; Site Tools Dynamic Cache Flush. Purge script still broken. List ↑/↓ fixed to `scrollTo` (not `scrollIntoView`). |
 | 2026-09-07 | Branch cut v4 | Freeze `Kristina-Irwin-Site-Project-v3` @ `dd06fdd`. Active `Kristina-Irwin-Site-Project-v4` at **4.0.0**. Backup `v1-f`. `main` untouched. |
 | 2026-09-07 | Sync before cut | Commit `dd06fdd` — closeout docs, Notes move, map/photo asset bank, screencapture. Pushed v3. |

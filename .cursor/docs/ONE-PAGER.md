@@ -4,7 +4,7 @@ Living notes for the LACCD Seat 2 campaign page. **TRUTH.md** still wins if this
 
 ## Status (2026-09-07)
 
-**Active branch** `Kristina-Irwin-Site-Project-v4` @ **4.0.0**. **Live** https://kristinairwin.com: District map + college list + endorsement ticker (`6157fec`), Involve polish, hero `KI-New-HomeBg2`. Email: `kristina@kristinairwin.com`. Committee/FPPC placeholders remain.
+**Active branch** `Kristina-Irwin-Site-Project-v4` @ **4.0.0**. **Live** https://kristinairwin.com: District map + college list + endorsement ticker; footer `SITE.disclosure` + MSC credit mailto; Involve polish; hero `KI-New-HomeBg2`. HEAD `bdb02fd`. FPPC ID# still pending. Email: `kristina@kristinairwin.com`.
 
 ## Brand
 
@@ -52,7 +52,9 @@ Edit **`SITE.title`** and **`SITE.description`** in `lib/site.ts`, then redeploy
 - Donate by Check box (`SITE.checkPayee` / `SITE.checkMail`) width-matched to Involve lede
 - Download Form → `/media/Kristina-Irwin-contribution-form.docx`
 - Email under form (`.ki-note`)
-- Footer full-width `#15263D` + top hairline; FPPC disclosure box stays until official copy; **opacity 50%**
+- Footer full-width `#15263D` + top hairline
+- Disclosure box (**50% opacity**): `Paid For By Kristina Irwin for Los Angeles Community College District- ID# pending`
+- Credit under box: `© 2026 · Website design and development by My Studio Channel.` → mailto `createmystudiochannel@gmail.com`
 
 ## Endorsements + District (live 2026-09-07)
 
