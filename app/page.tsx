@@ -233,9 +233,7 @@ export default function Home() {
         <p className="ki-foot-office">
           Candidate for {SITE.office} • {SITE.seat}
         </p>
-        <p className="ki-disc">
-          Campaign disclosure placeholder: Paid for by [Official Committee Name] • FPPC ID #[Number]
-        </p>
+        <p className="ki-disc">{SITE.disclosure}</p>
       </footer>
       <BackToTop />
     </>

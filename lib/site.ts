@@ -12,6 +12,8 @@ export const SITE = {
   },
   formHref: "/media/Kristina-Irwin-contribution-form.docx",
   formFileName: "Kristina-Irwin-contribution-form.docx",
+  /** Footer paid-for-by line. Update when official FPPC ID arrives. */
+  disclosure: "Paid For By Kristina Irwin for Los Angeles Community College District- ID# pending",
   /** Blue link in Google. Keep under ~60 characters. */
   title: "Kristina Irwin | LACCD Board of Trustees, Seat 2",
   /**

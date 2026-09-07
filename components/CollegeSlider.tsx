@@ -63,6 +63,9 @@ export default function CollegeSlider({ activeId, onSelect }: Props) {
     }
   }, [sync])
 
+  const itemTopInTrack = (item: HTMLElement, track: HTMLElement) =>
+    item.getBoundingClientRect().top - track.getBoundingClientRect().top + track.scrollTop
+
   const scrollTrackTo = (top: number, smooth = true) => {
     const el = trackRef.current
     if (!el) return
@@ -77,10 +80,10 @@ export default function CollegeSlider({ activeId, onSelect }: Props) {
     const item = el.querySelector<HTMLElement>(`[data-college-id="${activeId}"]`)
     if (!item) return
 
+    const top = itemTopInTrack(item, el)
+    const bottom = top + item.offsetHeight
     const viewTop = el.scrollTop
     const viewBottom = viewTop + el.clientHeight
-    const top = item.offsetTop
-    const bottom = top + item.offsetHeight
 
     if (top < viewTop) {
       scrollTrackTo(top)
@@ -95,14 +98,19 @@ export default function CollegeSlider({ activeId, onSelect }: Props) {
     const items = Array.from(el.querySelectorAll<HTMLElement>(":scope > li"))
     if (!items.length) return
 
-    const viewTop = el.scrollTop
-    let index = items.findIndex((item) => item.offsetTop + item.offsetHeight > viewTop + 12)
-    if (index < 0) index = 0
+    // Row currently pinned at (or just above) the top of the list viewport
+    let index = 0
+    for (let i = 0; i < items.length; i++) {
+      if (itemTopInTrack(items[i], el) <= el.scrollTop + 2) index = i
+      else break
+    }
 
     const next = Math.min(items.length - 1, Math.max(0, index + dir))
-    const target = items[next]
-    if (!target) return
-    scrollTrackTo(target.offsetTop)
+    if (next === index) {
+      scrollTrackTo(dir < 0 ? 0 : el.scrollHeight)
+      return
+    }
+    scrollTrackTo(itemTopInTrack(items[next], el))
   }
 
   return (
