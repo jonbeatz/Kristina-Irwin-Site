@@ -5,7 +5,7 @@ Production host for **https://kristinairwin.com**. Static Next export (`out/`) u
 > Secrets live only in **`.env.local`** (gitignored) and  
 > `D:\Hermes\projects\_core-scripts\siteground-access\SiteGround_SFTP.md`.
 
-**Live (2026-09-03):** LACCD Board Seat 2 one-pager with Involve polish (Donate by Check, Download Form, About photo swap, footer band). Committee / FPPC placeholders still on the page. Google SERP may still show Senate until recrawl.
+**Live (2026-09-07):** LACCD Board Seat 2 one-pager with District map + college list + endorsement ticker (`6157fec`), plus Involve polish and hero `KI-New-HomeBg2`. Committee / FPPC placeholders still on the page. Google SERP may still show Senate until recrawl.
 
 ## Full ship process (repeat this)
 

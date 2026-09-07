@@ -3,7 +3,7 @@
 ## Unreleased — branch `Kristina-Irwin-Site-Project-v4`
 
 - Still waiting on Kristina: official committee name, FPPC ID; optional shorter official Google bio.
-- Fix or retire `scripts/siteground-purge-cache.mjs` (loopback PHP PURGE dead on this box as of 2026-09-03).
+- Fix or retire `scripts/siteground-purge-cache.mjs` (loopback PHP PURGE dead on this box as of 2026-09-03; still broken 2026-09-07).
 - SSL Let’s Encrypt renewal before **2026-09-23**.
 
 ## v4.0.0 — 2026-09-07
@@ -11,6 +11,7 @@
 - Branch cut: freeze `Kristina-Irwin-Site-Project-v3` @ `dd06fdd`; active `Kristina-Irwin-Site-Project-v4`.
 - Pre-cut backup `kristina-irwin-site-project-v1-f`.
 - Frozen line includes live Involve polish + hero `KI-New-HomeBg2`, map/photo asset bank, notes under `.cursor/assets/Notes/`.
+- **Live ship (same day):** District Leaflet/OSM map + 9-college list (list↔pin), endorsement ticker (Romero, Antonovich, Hernandez, ICAN). Commit `6157fec`. SiteGround `--clean` + Site Tools Dynamic Cache Flush. Esri dark basemap rejected; college ↑/↓ uses list-only `scrollTo`.
 
 ## v3.0.0 — 2026-09-03
 

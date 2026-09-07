@@ -5,7 +5,7 @@ If an agent is new to this profile, read this file first.
 **Profile root:** D:\\Hermes\\projects\\Kristina-Irwin-Site
 **Hermes slug:** kristina-irwin-site
 
-**Now (2026-09-07):** Active `Kristina-Irwin-Site-Project-v4` (4.0.0). Frozen v3 @ `dd06fdd`. Live https://kristinairwin.com has Involve polish + hero `KI-New-HomeBg2`. Redeploy: `site:build:static` → `siteground:deploy:clean` → **Site Tools Dynamic Cache Flush** (`siteground:purge-cache` broken — see SiteGround-Deploy.md). SSL expires **2026-09-23**.
+**Now (2026-09-07):** Active `Kristina-Irwin-Site-Project-v4` (4.0.0). Frozen v3 @ `dd06fdd`. **Live** https://kristinairwin.com has District map + college list + endorsement ticker (`6157fec`) plus Involve polish + hero `KI-New-HomeBg2`. Redeploy: `site:build:static` → `siteground:deploy:clean` → **Site Tools Dynamic Cache Flush** (`siteground:purge-cache` broken — see SiteGround-Deploy.md). SSL expires **2026-09-23**.
 
 **Local images (this PC, $0):** `npm run comfy:start:qwen` then App Mode **Lightning**. Card: [LOCAL-COMFY-2512-LIGHTNING.md](./LOCAL-COMFY-2512-LIGHTNING.md).
 

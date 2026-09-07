@@ -2,9 +2,9 @@
 
 Living notes for the LACCD Seat 2 campaign page. **TRUTH.md** still wins if this drifts.
 
-## Status (2026-09-03)
+## Status (2026-09-07)
 
-**Active branch** `Kristina-Irwin-Site-Project-v3` @ **3.0.0**. Live https://kristinairwin.com still prior ship until next SiteGround deploy. Local: mail-in donate box, contribution form download, About photo swap. Email: `kristina@kristinairwin.com`. Committee/FPPC placeholders remain.
+**Active branch** `Kristina-Irwin-Site-Project-v4` @ **4.0.0**. **Live** https://kristinairwin.com: District map + college list + endorsement ticker (`6157fec`), Involve polish, hero `KI-New-HomeBg2`. Email: `kristina@kristinairwin.com`. Committee/FPPC placeholders remain.
 
 ## Brand
 
@@ -54,8 +54,17 @@ Edit **`SITE.title`** and **`SITE.description`** in `lib/site.ts`, then redeploy
 - Email under form (`.ki-note`)
 - Footer full-width `#15263D` + top hairline; FPPC disclosure box stays until official copy; **opacity 50%**
 
+## Endorsements + District (live 2026-09-07)
+
+- **Ticker** above District: navy `#15263D`, soft top stroke; names in `lib/endorsements.ts`
+- **Map:** Leaflet + OpenStreetMap (keep color streets — not Esri dark). Pins + list share `activeId`
+- **List:** `lib/colleges.ts`; ↑/↓ scroll list via `scrollTo` only; stack full-width ≤1100px
+- Nav link: **District** → `#district`
+
 ## Do not
 
 - Mix `archive/live-site-2026-06/` (Senate multi-page) into root `app/`
 - Run `web:build` while `web:dev` is on `:3000`
 - Ship without SuperCacher purge after SiteGround upload
+- Use `scrollIntoView` inside the college list (scrolls the page)
+- Switch map to dark Esri tiles without Jon approving
