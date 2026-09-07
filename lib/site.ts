@@ -27,6 +27,7 @@ export const NAV = [
   { href: "#why", id: "why", label: "Why Kristina" },
   { href: "#priorities", id: "priorities", label: "Priorities" },
   { href: "#about", id: "about", label: "About" },
+  { href: "#district", id: "district", label: "District" },
 ] as const
 
 export const PRIORITIES = [

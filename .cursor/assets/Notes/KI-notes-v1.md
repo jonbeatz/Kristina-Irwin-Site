@@ -1,17 +1,10 @@
 
-Morning!! 
-
-Working on getting you a better map Jon and other stuff.... Will send everything over by tomorrow latest. Thx! 
-
-
-Thank you for your support! 
-
-
-Endorsed by:
+Endorsed by: 
 Gloria Romero, former California State Senate Majority Leader
 Mike Antonovich, former LA County Supervisor 
 David Hernandez, former President of Los Angeles Mission College Foundation
 ICAN, Israeli-American Civil Action Network
+
 
 
 The nine individual colleges in the district are:
@@ -24,3 +17,5 @@ Los Angeles Southwest College – Located in Los Angeles.
 Los Angeles Trade-Technical College(LATTC) – Located in Downtown Los Angeles.
 Los Angeles Valley College (LAVC) – Located in Valley Glen.
 West Los Angeles College
+
+

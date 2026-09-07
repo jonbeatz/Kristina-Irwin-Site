@@ -1,5 +1,7 @@
 import Image from "next/image"
 import BackToTop from "@/components/BackToTop"
+import DistrictSection from "@/components/DistrictSection"
+import EndorsementTicker from "@/components/EndorsementTicker"
 import SiteNav from "@/components/SiteNav"
 import { PRIORITIES, SITE } from "@/lib/site"
 
@@ -219,6 +221,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <EndorsementTicker />
+        <DistrictSection />
       </main>
 
       <footer className="ki-foot">

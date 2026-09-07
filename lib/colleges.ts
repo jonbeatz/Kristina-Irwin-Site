@@ -1,0 +1,77 @@
+/** LACCD nine colleges — Seat 2 district context. Coordinates are campus areas. */
+export const LACCD_COLLEGES = [
+  {
+    id: "mission",
+    short: "Mission",
+    name: "Los Angeles Mission College",
+    city: "Sylmar",
+    lat: 34.3142,
+    lng: -118.4205,
+  },
+  {
+    id: "pierce",
+    short: "Pierce",
+    name: "Los Angeles Pierce College",
+    city: "Woodland Hills",
+    lat: 34.1835,
+    lng: -118.5792,
+  },
+  {
+    id: "valley",
+    short: "Valley",
+    name: "Los Angeles Valley College",
+    city: "Valley Glen",
+    lat: 34.1758,
+    lng: -118.4135,
+  },
+  {
+    id: "westla",
+    short: "West LA",
+    name: "West Los Angeles College",
+    city: "Culver City",
+    lat: 34.0048,
+    lng: -118.3868,
+  },
+  {
+    id: "city",
+    short: "City",
+    name: "Los Angeles City College",
+    city: "East Hollywood",
+    lat: 34.0872,
+    lng: -118.2918,
+  },
+  {
+    id: "east",
+    short: "East LA",
+    name: "East Los Angeles College",
+    city: "Monterey Park",
+    lat: 34.0418,
+    lng: -118.1498,
+  },
+  {
+    id: "trade",
+    short: "Trade-Tech",
+    name: "Los Angeles Trade-Technical College",
+    city: "Downtown Los Angeles",
+    lat: 34.0286,
+    lng: -118.2705,
+  },
+  {
+    id: "southwest",
+    short: "Southwest",
+    name: "Los Angeles Southwest College",
+    city: "South Los Angeles",
+    lat: 33.9288,
+    lng: -118.3032,
+  },
+  {
+    id: "harbor",
+    short: "Harbor",
+    name: "Los Angeles Harbor College",
+    city: "Wilmington",
+    lat: 33.7848,
+    lng: -118.2872,
+  },
+] as const
+
+export type LaccdCollege = (typeof LACCD_COLLEGES)[number]
