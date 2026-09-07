@@ -2,13 +2,13 @@
 
 ## Current Focus
 
-- [2026-09-03 close] **LIVE** https://kristinairwin.com — hero `KI-New-HomeBg2.png` + Involve polish. HEAD `0916d0e` on `Kristina-Irwin-Site-Project-v3` (3.0.0). Frozen v2 @ `f1fac14`. Backup `v1-e`.
-- **Fleet:** left running (LiteLLM :4000, ngrok :4040, LM Studio :1234) — next workspace uses **Open Project**.
+- [2026-09-07] **Active:** `Kristina-Irwin-Site-Project-v4` (4.0.0). **Frozen:** `Kristina-Irwin-Site-Project-v3` @ `dd06fdd` (prior v2 @ `f1fac14`). Pre-cut backup `kristina-irwin-site-project-v1-f`.
+- **LIVE** https://kristinairwin.com — Involve polish + hero `KI-New-HomeBg2.png` (`center 28%`). Unchanged by this branch cut until next deploy.
 - Redeploy: `site:build:static` → `siteground:deploy:clean` → **Site Tools Dynamic Cache Flush** (`siteground:purge-cache` broken).
 - Client contact spelling: **Yolando** (not Yolanda) + Kristina.
-- **Next open:** official committee / FPPC when Kristina sends; SSL before **2026-09-23**; Google recrawl when access exists; optional purge-script fix.
+- **Next:** today's v4 work; official committee / FPPC when Kristina sends; SSL before **2026-09-23**; Google recrawl when access exists.
 - Local: `web:dev` **:3000**. Never `web:build` while `:3000` is up.
-- Left untracked on purpose: `CREDENTIALS-MANIFEST.md`, `CampaignMark.tsx`, `__pycache__/`. Extra KI photo candidates (`Front_K_Irwin`, `KI-New-HomeBg1`, UUID PNG) not yet used.
+- Left untracked on purpose: `CREDENTIALS-MANIFEST.md`, `CampaignMark.tsx`, `__pycache__/`. Extra assets committed on freeze line (maps, Back_K_Irwin, Notes/).
 
 ## One-pager (what shipped)
 
@@ -32,7 +32,7 @@ Single page: sticky/full-width nav, hero, vote bar, Why, Priorities, About, Invo
 | Gutter | `--ki-gutter: 52px` |
 | Footer | Full-width `#15263D` + top hairline. Committee/FPPC box at **50% opacity**. |
 
-Assets stay under **`.cursor/assets/`**. Client notes: `.cursor/assets/KI-notes-v1.md`.
+Assets stay under **`.cursor/assets/`**. Client notes: `.cursor/assets/Notes/KI-notes-v1.md`.
 
 ## SiteGround go-live
 
@@ -46,28 +46,21 @@ Full steps: `.cursor/docs/SiteGround-Deploy.md`.
 - `--clean` on `public_html` only — this SFTP home has ~16 other domains.
 - DNS: A `35.215.107.60`; MX `smtp.google.com` — **do not touch MX**. SSL expires **2026-09-23**.
 
-## GitHub cleanup (2026-08-21)
-
-- Removed GitHub Pages workflow (fail email). Closed Dependabot PRs #1–#6.
-- Backups: `kristina-irwin-site-project-v1-a`, then **v1-b** before the v2 branch cut; **v1-d** before v3 cut.
-
 ## Decisions
 
 - Full-width nav; type wordmark only.
 - Never `web:build` while `web:dev` is running.
 - Production is SiteGround static, not GitHub Pages, not a Node app.
-- SuperCacher flush is part of every deploy, not optional.
+- SuperCacher flush is part of every deploy, not optional — Site Tools Dynamic Cache is primary.
 - Jon approved live ship **with** FPPC placeholder still on the page.
-- Tab favicons cannot be made larger than the browser slot — crop the mark to fill the square.
-- Search snippets: we publish tags; Google recrawls on its own. Do not rebuild old Senate sitelink pages.
 - Client: **Yolando** + Kristina.
-- Mail-in donate copy is live (payee + Woodland Hills address); still awaiting official committee / FPPC text.
 
 ## Git
 
-- Working branch: `Kristina-Irwin-Site-Project-v3`
+- Working branch: `Kristina-Irwin-Site-Project-v4`
+- Frozen restore: `Kristina-Irwin-Site-Project-v3` @ `dd06fdd`
 - `archive/` gitignored and skipped by backups.
 
 ---
 
-*Last Entry: 2026-09-03*
+*Last Entry: 2026-09-07*

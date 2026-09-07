@@ -1,9 +1,9 @@
 # TRUTH.md — Kristina-Irwin-Site
 
-**Version:** 3.0.0  
+**Version:** 4.0.0  
 **Profile root:** `D:\Hermes\projects\Kristina-Irwin-Site`  
-**Active branch:** `Kristina-Irwin-Site-Project-v3`  
-**Frozen:** `Kristina-Irwin-Site-Project-v2` @ `f1fac14` (prior freeze: `Kristina-Irwin-Site-Project-v1` @ `1865e60`)  
+**Active branch:** `Kristina-Irwin-Site-Project-v4`  
+**Frozen:** `Kristina-Irwin-Site-Project-v3` @ `dd06fdd` (prior: v2 @ `f1fac14`; v1 @ `1865e60`)  
 **Live:** https://kristinairwin.com (SiteGround — client-owned)  
 **GitHub:** https://github.com/jonbeatz/Kristina-Irwin-Site (private)  
 **Archive (live multi-page site):** `archive/live-site-2026-06/` (local only — not git, not backups)  
@@ -34,7 +34,7 @@ This repo is a **one-page** rebuild from `.cursor/assets/KI-MockUps/`. The old m
 
 Kristina Irwin — Los Angeles Community College District Board of Trustees, **Seat 2** (election **November 3, 2026**). Committee name, FPPC ID, and donation/endorse URLs: confirm with client before shipping (placeholders on the page).
 
-**Build status (2026-09-03):** Active line is `Kristina-Irwin-Site-Project-v3` (3.0.0). Live https://kristinairwin.com has Involve polish (Donate by Check, form download, About photo swap, footer band) after `site:build:static` → `siteground:deploy:clean` + Site Tools Dynamic Cache flush. `npm run siteground:purge-cache` currently fails — use Site Tools until fixed. Committee / FPPC placeholders remain.
+**Build status (2026-09-07):** Active line is `Kristina-Irwin-Site-Project-v4` (4.0.0). Frozen restore line: `Kristina-Irwin-Site-Project-v3` @ `dd06fdd`. Live https://kristinairwin.com has Involve polish + hero `KI-New-HomeBg2`. Redeploy: `site:build:static` → `siteground:deploy:clean` + Site Tools Dynamic Cache flush (`siteground:purge-cache` broken). Committee / FPPC placeholders remain. SSL Let’s Encrypt expires **2026-09-23**.
 
 **How it runs:** Local = Next.js + Node (`web:dev`). SiteGround = static export only (`KI_STATIC=1` → `out/` → SFTP). Shared SiteGround does not host Node.js.
 

@@ -2,6 +2,8 @@
 
 | Date | Session | Key outcomes |
 |------|---------|-------------|
+| 2026-09-07 | Branch cut v4 | Freeze `Kristina-Irwin-Site-Project-v3` @ `dd06fdd`. Active `Kristina-Irwin-Site-Project-v4` at **4.0.0**. Backup `v1-f`. `main` untouched. |
+| 2026-09-07 | Sync before cut | Commit `dd06fdd` — closeout docs, Notes move, map/photo asset bank, screencapture. Pushed v3. |
 | 2026-09-03 | Close / handoff (pm) | Hero `KI-New-HomeBg2` live + git `0916d0e` pushed. Fleet left running. Next: committee/FPPC; SSL before 2026-09-23. |
 | 2026-09-03 | Hero photo swap live | Replaced `kristina-hero.png` with `KI-New-HomeBg2.png` (crop `center 28%`). `siteground:deploy:clean` + Site Tools Dynamic Cache Flush. Live SHA match. |
 | 2026-09-03 | Close / handoff | Docs+mem0+vault+git `c0c34d6` pushed; backup `v1-e`. Fleet left running. Next: committee/FPPC; SSL before 2026-09-23. |

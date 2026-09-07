@@ -1,10 +1,16 @@
 # Changelog — Kristina-Irwin-Site
 
-## Unreleased — branch `Kristina-Irwin-Site-Project-v3`
+## Unreleased — branch `Kristina-Irwin-Site-Project-v4`
 
 - Still waiting on Kristina: official committee name, FPPC ID; optional shorter official Google bio.
 - Fix or retire `scripts/siteground-purge-cache.mjs` (loopback PHP PURGE dead on this box as of 2026-09-03).
-- **2026-09-03 hero:** live photo is `KI-New-HomeBg2.png` → `public/images/kristina-hero.png` (`object-position: center 28%`). SiteGround `--clean` + Site Tools Dynamic Cache Flush.
+- SSL Let’s Encrypt renewal before **2026-09-23**.
+
+## v4.0.0 — 2026-09-07
+
+- Branch cut: freeze `Kristina-Irwin-Site-Project-v3` @ `dd06fdd`; active `Kristina-Irwin-Site-Project-v4`.
+- Pre-cut backup `kristina-irwin-site-project-v1-f`.
+- Frozen line includes live Involve polish + hero `KI-New-HomeBg2`, map/photo asset bank, notes under `.cursor/assets/Notes/`.
 
 ## v3.0.0 — 2026-09-03
 
@@ -14,6 +20,7 @@
 - About: swap photos (tweed main / red-blazer inset); nav wordmark slightly larger.
 - Commit on freeze line: `f1fac14` feat(involve) mail-in donate + form download + about polish.
 - **Live ship (same day):** `siteground:deploy:clean` **UPLOAD_OK**; SuperCacher flushed via Site Tools (Dynamic Cache). Bare URL matches polish. `?v=ship` was cache-bust only.
+- **Hero (same line):** live photo `KI-New-HomeBg2.png` → `public/images/kristina-hero.png` (`object-position: center 28%`).
 
 ## v2.0.0 — 2026-08-22
 
