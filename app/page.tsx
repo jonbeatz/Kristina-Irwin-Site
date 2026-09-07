@@ -234,6 +234,10 @@ export default function Home() {
           Candidate for {SITE.office} • {SITE.seat}
         </p>
         <p className="ki-disc">{SITE.disclosure}</p>
+        <p className="ki-credit">
+          © 2026 · Website design and development by{" "}
+          <a href={`mailto:${SITE.credit.email}`}>{SITE.credit.label}</a>.
+        </p>
       </footer>
       <BackToTop />
     </>
